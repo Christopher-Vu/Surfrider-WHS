@@ -141,12 +141,12 @@ body {
 
 .bbb1 {
     bottom: 10vh;
-    right: 10vw;
+    right: 10%;
 }
 
 .bbb2 {
     bottom: 10vh;
-    right: 23vw; 
+    right: 23%; 
 }
 
 .bbb:hover {
