@@ -1,0 +1,19 @@
+/*Black: #000000
+Very Dark Grey: #333333
+Dark Grey: #666666
+Deep Blue: #000080
+Dark Blue: #000066
+Navy Blue: #000033*/
+
+.top-section {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+.navbar {
+    width:100%;
+    overflow:hidden;
+    display:inline-block;
+    background-color: #000;
+}
+}
