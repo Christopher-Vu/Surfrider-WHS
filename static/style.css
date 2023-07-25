@@ -103,16 +103,30 @@ body {
 }
 
 @media (max-width: 600px) {
+      .bbb {
+        width: 25vw !important;
+    }
+
+    .bbb1 {
+        left: 20vh !important;
+    }
+
+    .bbb2 {
+        right: 20vh !important;
+    }
+
       .statement {
         font-size: 10px; /* Font size for screens less than 600px */
     }
 
       .title {
         transform: translate(10vw, 38vh);
-      }
     }
+}
 
 .bbb { /*big black button*/
+    font-size: clamp(10px, 1em, 100px);
+    text-align: center;
     font-weight: 500;
     color: white;
     margin: 3vh;
@@ -121,6 +135,8 @@ body {
     padding: 2vh;
     background-color: black;
     position: absolute;
+    border-radius: 30px;
+    padding-bottom: 1.5em;
 }
 
 .bbb1 {
@@ -131,4 +147,10 @@ body {
 .bbb2 {
     bottom: 10vh;
     right: 23vw; 
+}
+
+.bbb:hover {
+    background-color: rgba(246, 244, 235, 0.4);
+    color: black;
+    transition: 500ms;
 }
