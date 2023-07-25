@@ -1,19 +1,134 @@
-/*Black: #000000
-Very Dark Grey: #333333
-Dark Grey: #666666
-Deep Blue: #000080
-Dark Blue: #000066
-Navy Blue: #000033*/
-
 .top-section {
     position: fixed;
     width: 100%;
     z-index: 2;
+}
 
 .navbar {
     width:100%;
     overflow:hidden;
     display:inline-block;
-    background-color: #000;
 }
+
+.landing-background {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-attachment: scroll;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/waves.png");
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+ }
+
+.navbar-item {
+    font-weight: bold;
+    z-index: 1;
+    color: #454545;
+    opacity: 0.75;
+    font-size: clamp(3px, 3vw, 25px);
+    padding: clamp(3px, 2vw, 25px);
+    margin-top: 0.2em;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+    float:left;
+}
+
+.navbar-item:hover {
+    background-color: rgba(250, 244, 235, 0.4);
+    transition: 500ms;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #F6F4EB;
+    padding: 10px;
+}
+
+.menu-icon {
+    margin: clamp(10px, 1vw, 30px);
+    padding: clamp(13px, 0.5em, 0.5em);
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+.menu-icon:hover {
+    background-color: rgba(250, 244, 235, 0.4);
+    color: gray;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(3rem, 7vw, 100vw);
+    transform: translate(10vw, 26vh);
+}
+
+.statement {
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    transform: translate(10vw, 40vh);
+    color: aliceblue;
+}
+
+@media (max-width: 600px) {
+      .statement {
+        font-size: 10px; /* Font size for screens less than 600px */
+    }
+
+      .title {
+        transform: translate(10vw, 38vh);
+      }
+    }
+
+.bbb { /*big black button*/
+    font-weight: 500;
+    color: white;
+    margin: 3vh;
+    height: 1vh;
+    width: 8vw;
+    padding: 2vh;
+    background-color: black;
+    position: absolute;
+}
+
+.bbb1 {
+    bottom: 10vh;
+    right: 10vw;
+}
+
+.bbb2 {
+    bottom: 10vh;
+    right: 23vw; 
 }

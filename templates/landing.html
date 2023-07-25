@@ -12,17 +12,44 @@
     </head>
     <body>
         <div class="landing-background">
+            <!--<ul class="menu">
+                <li><a href="#">Menu Item 1</a></li>
+                <li><a href="#">Menu Item 2</a></li>
+                <li><a href="#">Menu Item 3</a></li>-->
             <div class="top-section">
                 <div class="navbar">
-                    <a href="landing.html"><img src="" alt="" class="navbar-logo"></a>
-                    <a href="events.html" class="navbar-item">EVENTS</a>
-                    <a href="join.html" class="navbar-item">JOIN</a>
-
+                    <div class="menu-icon navbar-item" style="float: right;">≡</div> 
+                    <a href="landing.html"><img src="" alt="" class="navbar-logo" ></a>
                     <a href="about_us.html" class="navbar-item" style="float: right;">ABOUT US</a>
-                    <a href="contact.html" class="navbar-item" style="float: right;">CONTACT</a>
+                    <a href="news.html" class="navbar-item" style="float: right;">CONTACT</a>
+                    <a href="campaigns.html" class="navbar-item" style="float: right;">CAMPAIGNS</a>
+                    <a href="cabinet.html" class="navbar-item" style="float: right;">CABINET</a>
                 </div>
             </div>
+
+            <p class="title">WHS<br>SURFRIDER</p>
+            <p class="statement">dedicated to the protection and enjoyment of the world’s ocean, <br>waves and beaches, for all people, through a powerful activist network</p>
             
+            <a href="sign_up.html" class="bbb bbb1">Sign Up</a>
+            <a href="get_involved.html" class="bbb bbb2">Get Involved</a>
         </div>
     </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const menu = document.querySelector('.menu');
+
+            menuIcon.addEventListener('click', function () {
+            menu.classList.toggle('show');
+            });
+
+            // Hide the menu when clicking outside the menu container
+            document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+            });
+        });
+    </script>
 </html>
