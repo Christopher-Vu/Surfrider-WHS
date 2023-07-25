@@ -1,6 +1,6 @@
 .top-section {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
 }
 
@@ -27,6 +27,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
  a, a:hover, a:focus, a:active {
@@ -102,21 +103,24 @@ body {
     color: aliceblue;
 }
 
-@media (max-width: 600px) {
+@media (max-aspect-ratio: 1/1) {
       .bbb {
         width: 25vw !important;
+        font-size: 1em !important;
+        padding-top:0.8em !important;
+        padding-bottom: 0.8em !important;
     }
 
     .bbb1 {
-        left: 20vh !important;
+        left: 7vw !important;
     }
 
     .bbb2 {
-        right: 20vh !important;
+        right: 7vw !important;
     }
 
       .statement {
-        font-size: 10px; /* Font size for screens less than 600px */
+        font-size: calc(100vw / 39); 
     }
 
       .title {
@@ -125,28 +129,27 @@ body {
 }
 
 .bbb { /*big black button*/
-    font-size: clamp(10px, 1em, 100px);
+    font-size: clamp(10px, 1.5em, 100px);
     text-align: center;
     font-weight: 500;
     color: white;
     margin: 3vh;
-    height: 1vh;
-    width: 8vw;
+    height: 3vh;
+    width: 15vw;
     padding: 2vh;
     background-color: black;
     position: absolute;
     border-radius: 30px;
-    padding-bottom: 1.5em;
 }
 
 .bbb1 {
     bottom: 10vh;
-    right: 10%;
+    right: 5vw;
 }
 
 .bbb2 {
     bottom: 10vh;
-    right: 23%; 
+    right: 25vw; 
 }
 
 .bbb:hover {
