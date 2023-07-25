@@ -103,6 +103,17 @@ body {
     color: aliceblue;
 }
 
+@media (max-width: 600px) {
+    .wide_only {
+        display: none;
+    }
+
+    .menu-icon {
+        font-size: 4vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
 @media (max-aspect-ratio: 1/1) {
       .bbb {
         width: 25vw !important;
