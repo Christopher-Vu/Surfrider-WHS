@@ -55,17 +55,31 @@ body {
     transition: 500ms;
 }
 
-.menu-container {
-    position: relative;
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu {
-    display: none;
+    margin: 0;
     position: absolute;
-    top: 100%;
+    top: 0;
     right: 0;
+    left: 50%;
+    height: 100%;
+
+    display: none;
     background-color: #F6F4EB;
     padding: 10px;
+}
+
+.menu.show {
+    display: block;
 }
 
 .menu-icon {
@@ -123,7 +137,7 @@ body {
 }
     
 @media (max-width: 600px) {
-    .wide_only {
+    .wide-only {
         display: none;
     }
 
@@ -155,6 +169,10 @@ body {
 
       .title {
         transform: translate(10vw, 38vh);
+    }
+
+    .menu {
+        left: 10%;
     }
 }
 
@@ -219,4 +237,8 @@ body {
 
 .bbb:hover {
   color: black;
+}
+
+.wide-only {
+    display: block;
 }

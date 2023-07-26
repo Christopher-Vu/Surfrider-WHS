@@ -12,17 +12,13 @@
     </head>
     <body>
         <div class="landing-background">
-            <!--<ul class="menu">
-                <li><a href="#">Menu Item 1</a></li>
-                <li><a href="#">Menu Item 2</a></li>
-                <li><a href="#">Menu Item 3</a></li>-->
             <div class="top-section">
                 <div class="navbar">
                     <div class="menu-icon navbar-item" style="float: right;">≡</div> 
-                    <a href="about_us.html" class="navbar-item wide_only" style="float: right;">ABOUT US</a>
-                    <a href="news.html" class="navbar-item wide_only" style="float: right;">CONTACT</a>
-                    <a href="campaigns.html" class="navbar-item wide_only" style="float: right;">CAMPAIGNS</a>
-                    <a href="cabinet.html" class="navbar-item wide_only" style="float: right;">CABINET</a>
+                    <a href="about_us.html" class="navbar-item wide-only" style="float: right;">ABOUT US</a>
+                    <a href="news.html" class="navbar-item wide-only" style="float: right;">CONTACT</a>
+                    <a href="campaigns.html" class="navbar-item wide-only" style="float: right;">CAMPAIGNS</a>
+                    <a href="cabinet.html" class="navbar-item wide-only" style="float: right;">CABINET</a>
                 </div>
             </div>
 
@@ -33,23 +29,49 @@
             <a href="sign_up.html" class="bbb bbb1">Sign Up<span></span></a>
             <a href="get_involved.html" class="bbb bbb2">Get Involved<span></span></a>
         </div>
+
+        <div class="overlay"></div>
+        <ul class="menu">
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+        </ul>
+        </body>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuIcon = document.querySelector('.menu-icon');
+                const menu = document.querySelector('.menu');
+                const wideOnlyNav = document.querySelectorAll('.wide-only');
+                const overlay = document.querySelector('.overlay');
+
+                menuIcon.addEventListener('click', function () {
+                    if (menu.classList.contains('show')) {
+                        menu.classList.remove('show');
+                        wideOnlyNav.forEach(function(navItem) {
+                            navItem.style.display = 'block';
+                            });
+                        overlay.style.display = 'none';
+                    } else {
+                        menu.classList.toggle('show');
+                        wideOnlyNav.forEach(function(navItem) {
+                            navItem.style.display = 'none';
+                            });
+                        overlay.style.display = 'block';
+                    }
+                });
+
+                // Hide the menu when clicking outside the menu container
+                document.addEventListener('click', function (event) {
+                    if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                        menu.classList.remove('show');
+                        wideOnlyNav.forEach(function(navItem) {
+                            navItem.style.display = 'block';
+                            });
+                        overlay.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </body>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.querySelector('.menu-icon');
-            const menu = document.querySelector('.menu');
-
-            menuIcon.addEventListener('click', function () {
-            menu.classList.toggle('show');
-            });
-
-            // Hide the menu when clicking outside the menu container
-            document.addEventListener('click', function (event) {
-            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-                menu.classList.remove('show');
-            }
-            });
-        });
-    </script>
 </html>
