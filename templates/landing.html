@@ -47,15 +47,21 @@
                 const buttons = document.querySelectorAll('.bbb');
 
                 function closeMenu() {
-                    menu.classList.remove('show');
-
-                    wideOnlyNav.forEach(function(navItem) {
-                        navItem.style.display = 'block';
+                    menu.style.transform = "translate(200%, 0%)";
+                    setTimeout(function() {
+                        wideOnlyNav.forEach(function(navItem) {
+                            navItem.style.display = 'block';
                         });
 
-                    overlay.style.display = 'none';
+                        menu.classList.remove('show');
+                    }, 500);
+
+                    setTimeout(function() {
+                        overlay.style.display = 'none';
+                    }, 300);
 
                     buttons.forEach(function(button) {
+                        button.style.color = 'white';
                         const buttonSpan = button.querySelector('span')
                         const buttonBefore = document.createElement('style');
                         
@@ -99,7 +105,7 @@
                             if (window.innerWidth > window.innerHeight) {
                                 menu.style.transform = 'translate(100%, 0%)';
                             } else {
-                                menu.style.transform = 'translate(10%, 0%)';
+                                menu.style.transform = 'translate(0%, 0%)';
                             }
                         }, 50);
                     }
