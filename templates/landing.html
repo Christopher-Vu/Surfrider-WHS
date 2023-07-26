@@ -32,9 +32,9 @@
 
         <div class="overlay"></div>
         <ul class="menu">
-            <li><a href="#">Menu Item 1</a></li>
-            <li><a href="#">Menu Item 2</a></li>
-            <li><a href="#">Menu Item 3</a></li>
+            <li class="menu-item"><a href="#">Menu Item 1</a></li>
+            <li class="menu-item"><a href="#">Menu Item 2</a></li>
+            <li class="menu-item"><a href="#">Menu Item 3</a></li>
         </ul>
         </body>
 
@@ -58,6 +58,15 @@
                             navItem.style.display = 'none';
                             });
                         overlay.style.display = 'block';
+                        menu.style.transform = "translate(200%, 0%)";
+                        menu.style.transition = "all 0.7s";
+                        setTimeout(function() { // Apply the transform property after a slight delay
+                            if (window.innerWidth > window.innerHeight) {
+                                menu.style.transform = 'translate(100%, 0%)';
+                            } else {
+                                menu.style.transform = 'translate(10%, 0%)';
+                            }
+                        }, 50);
                     }
                 });
 

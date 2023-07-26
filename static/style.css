@@ -69,9 +69,8 @@ body {
     margin: 0;
     position: absolute;
     top: 0;
-    right: 0;
-    left: 50%;
     height: 100%;
+    width: 50%;
 
     display: none;
     background-color: #F6F4EB;
@@ -100,6 +99,10 @@ body {
 .menu-icon:hover {
     background-color: rgba(250, 244, 235, 0.4);
     color: gray;
+}
+
+.menu-item {
+
 }
 
 .title {
@@ -172,7 +175,7 @@ body {
     }
 
     .menu {
-        left: 10%;
+        width: 90%;
     }
 }
 
