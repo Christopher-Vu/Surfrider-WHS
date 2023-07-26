@@ -1,2 +1,2 @@
 # Surfrider-WHS
-Website for the WHS Surfrider Branch
+Website for the WHS Surfrider Branch.
