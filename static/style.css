@@ -56,33 +56,52 @@ body {
 }
 
 .overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+    font-size: 2.5em;
+    font-family: Arial;
+}
+
+.menu-section{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.menu-item {
+    font-family: Georgia;
+    font-size: 1.5em;
 }
 
 .menu {
     margin: 0;
     position: absolute;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 50%;
 
     display: none;
     background-color: white;
     padding: 10px;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
 }
 
 .menu.show {
-    display: block;
+    display: grid;
 }
 
 .menu-icon {
     margin: clamp(10px, 1vw, 30px);
+    margin-right: 25px;
     padding: clamp(13px, 0.5em, 0.5em);
     cursor: pointer;
     width: 1em;
@@ -135,14 +154,50 @@ body {
     width: 0
   }
 }
-    
+
+@media (min-width: 601px) {
+    .top-header {
+        padding-top: 100px !important;
+    }
+}
+
 @media (max-width: 600px) {
+    .menu-header {
+        padding-top: 60px !important;
+    }
+
+    .wide-only-nav {
+        display: none !important;
+    }
+
     .wide-only {
         display: none !important;
     }
 
     .menu-icon {
         font-size: 4vh;
+    }
+    
+    .menu {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .menu-header {
+        font-size: 1.8em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-section{
+        padding-left: 25%;
+        padding-right: 25%;
+        flex: 1;
+    }
+
+    .menu-spacer {
+        flex: 1;
     }
 }
 
@@ -199,12 +254,12 @@ body {
 
 .bbb1 {
     bottom: 10vh;
-    right: 5vw;
+    right: 2vw;
 }
 
 .bbb2 {
     bottom: 10vh;
-    right: 25vw; 
+    right: 24vw; 
 }
 
 .bbb span {
@@ -242,6 +297,6 @@ body {
     color: black !important;
 }
 
-.wide-only {
+.wide-only-nav {
     display: block;
 }
