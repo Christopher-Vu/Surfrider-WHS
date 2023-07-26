@@ -75,9 +75,6 @@ body {
     display: none;
     background-color: #F6F4EB;
     padding: 10px;
-
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 10px;
 }
 
 .menu.show {
@@ -104,6 +101,9 @@ body {
     color: gray;
 }
 
+.menu-item {
+
+}
 
 .title {
     margin: 0;
@@ -179,7 +179,7 @@ body {
     }
 }
 
-.bbb { 
+.bbb { /*big black button*/
     font-size: clamp(10px, 1.5em, 100px);
     text-align: center;
     font-weight: 500;
@@ -195,7 +195,6 @@ body {
     display: block;
     border: none;
     overflow: hidden;
-    transition: all 0.7s;
 }
 
 .bbb1 {
