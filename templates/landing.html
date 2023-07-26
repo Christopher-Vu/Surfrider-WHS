@@ -44,22 +44,57 @@
                 const menu = document.querySelector('.menu');
                 const wideOnlyNav = document.querySelectorAll('.wide-only');
                 const overlay = document.querySelector('.overlay');
+                const buttons = document.querySelectorAll('.bbb');
 
-                menuIcon.addEventListener('click', function () {
+                function closeMenu() {
+                    menu.classList.remove('show');
+
+                    wideOnlyNav.forEach(function(navItem) {
+                        navItem.style.display = 'block';
+                        });
+
+                    overlay.style.display = 'none';
+
+                    buttons.forEach(function(button) {
+                        const buttonSpan = button.querySelector('span')
+                        const buttonBefore = document.createElement('style');
+                        
+                        const bbbStyleTag = document.createElement('style');
+                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: rgba(246, 244, 235, 1); } .bbb:hover { color: black !important; }';
+                        document.head.appendChild(bbbStyleTag);
+
+                        buttonSpan.style.border = '4px solid white';
+                        buttonSpan.style.background = 'rgba(246, 244, 235, 0.2)';
+                    });
+                };
+
+                menuIcon.addEventListener('click', function() {
                     if (menu.classList.contains('show')) {
-                        menu.classList.remove('show');
-                        wideOnlyNav.forEach(function(navItem) {
-                            navItem.style.display = 'block';
-                            });
-                        overlay.style.display = 'none';
+                        closeMenu();
                     } else {
                         menu.classList.toggle('show');
                         wideOnlyNav.forEach(function(navItem) {
                             navItem.style.display = 'none';
                             });
-                        overlay.style.display = 'block';
-                        menu.style.transform = "translate(200%, 0%)";
+
+                        buttons.forEach(function(button) {
+                            const buttonSpan = button.querySelector('span')
+                            button.style.color = 'black';
+                            buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                            buttonSpan.style.border = '4px solid black';
+                        });
+
+                        const buttonBefore = document.createElement('style');
+                        buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
+                        document.head.appendChild(buttonBefore);
+
+                        const bbbStyleTag = document.createElement('style');
+                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
+                        document.head.appendChild(bbbStyleTag);
+
+                        menu.style.transform = 'translate(200%, 0%)';
                         menu.style.transition = "all 0.7s";
+                        overlay.style.display = 'block';
                         setTimeout(function() { // Apply the transform property after a slight delay
                             if (window.innerWidth > window.innerHeight) {
                                 menu.style.transform = 'translate(100%, 0%)';
@@ -73,11 +108,7 @@
                 // Hide the menu when clicking outside the menu container
                 document.addEventListener('click', function (event) {
                     if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-                        menu.classList.remove('show');
-                        wideOnlyNav.forEach(function(navItem) {
-                            navItem.style.display = 'block';
-                            });
-                        overlay.style.display = 'none';
+                        closeMenu();
                     }
                 });
             });
