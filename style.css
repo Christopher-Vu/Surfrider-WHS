@@ -114,7 +114,22 @@ body {
 
 .menu-icon {
     margin: clamp(10px, 1vw, 30px);
-    margin-right: 25px;
+    margin-right: 20px;
+    padding: clamp(13px, 0.5em, 0.5em);
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+.home-icon {
+    margin: clamp(10px, 1vw, 30px);
     padding: clamp(13px, 0.5em, 0.5em);
     cursor: pointer;
     width: 1em;
@@ -133,6 +148,10 @@ body {
     color: gray;
 }
 
+.home-icon:hover {
+    background-color: rgba(250, 244, 235, 0.4);
+    color: gray;
+}
 
 .title {
     margin: 0;
@@ -186,10 +205,6 @@ body {
         display: none !important;
     }
 
-    .menu-icon {
-        font-size: 4vh;
-    }
-    
     .menu {
         flex-direction: column;
         justify-content: space-evenly;
