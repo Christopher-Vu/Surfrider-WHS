@@ -34,7 +34,7 @@
         <div class="menu">
             <div class="menu-section">
                 <h2 class="menu-header top-header first-header"><b>Contribute</b></h2><br>
-                <a href="volunteer.html" class="menu-item">Events</a><br class="wide-only"><br class="wide-only">
+                <a href="volunteer.html" class="menu-item">Volunteer</a><br class="wide-only"><br class="wide-only">
                 <a href="sign_up.html" class="menu-item">Sign Up</a>
             </div>
             <div class="menu-section top-header">
@@ -53,11 +53,9 @@
             </div>
             <div class="menu-spacer"></div>
             <div class="menu-spacer"></div>
-
-            <div id="about_us" style="top: 100vh;">About</div>
         </div>
 
-        <div></div>
+        <div id="about-section-1" style="top: 100vh;"><br><br><br><br><br></div>
         </body>
 
         <script>
@@ -139,11 +137,16 @@
                     }
                 });
 
-                // Hide the menu when clicking outside the menu container
                 document.addEventListener('click', function (event) {
                     if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
                         closeMenu();
                     }
+                });
+
+                window.addEventListener('scroll', function() {
+                    const fadeButtons = document.querySelectorAll('.bbb');
+                    const scrollPosition = window.scrollY;
+
                 });
             });
         </script>
