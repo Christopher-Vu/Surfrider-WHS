@@ -11,23 +11,14 @@
         <link rel="icon" href="/images/logo.png">
     </head>
     <body>
-        <div class="landing-background">
-            <div class="top-section">
-                <div class="navbar">
-                    <div class="menu-icon navbar-item fade-in-fast fade-down" style="float: right;">≡</div> 
-                    <a href="index.html" class="home-icon navbar-item fade-in-fast fade-down" style="float: right;">⌂</a> 
-                    <a href="#about_us" class="navbar-item fade-in wide-only-nav fade-down" style="float: right;">ABOUT US</a>
-                    <a href="news.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">NEWS</a>
-                    <a href="cabinet.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">CABINET</a>
-                </div>
+        <div class="top-section">
+            <div class="navbar">
+                <div class="menu-icon navbar-item fade-in-fast fade-down" style="float: right;">≡</div> 
+                <a href="index.html" class="home-icon navbar-item fade-in-fast fade-down" style="float: right;">⌂</a> 
+                <a href="#about_us" class="navbar-item fade-in wide-only-nav fade-down" style="float: right;">ABOUT US</a>
+                <a href="news.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">NEWS</a>
+                <a href="cabinet.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">CABINET</a>
             </div>
-
-            <p class="title fade-in-fast fade-title" style="transform: translate(7vw, 26vh);">WHS<br>SURFRIDER</p>
-            <p class="statement" style="width: 51ch; animation: typing 3.5s steps(64), .5s step-end infinite alternate;">dedicated to the protection and enjoyment of the world’s ocean,</p>
-            <p class="statement" style="transform: translate(10vw, 42vh);">waves, and beaches, for all people, through a powerful activist network</p>
-            
-            <a href="sign_up.html" class="bbb bbb1 fade-in-fast fade-up">Sign Up<span></span></a>
-            <a href="volunteer.html" class="bbb bbb2 fade-in-fast fade-up">Volunteer<span></span></a>
         </div>
 
         <div class="overlay"></div>
@@ -53,11 +44,9 @@
             </div>
             <div class="menu-spacer"></div>
             <div class="menu-spacer"></div>
-
-            <div id="about_us" style="top: 100vh;">About</div>
         </div>
 
-        <div></div>
+        
         </body>
 
         <script>
@@ -66,7 +55,6 @@
                 const menu = document.querySelector('.menu');
                 const wideOnlyNav = document.querySelectorAll('.wide-only-nav');
                 const overlay = document.querySelector('.overlay');
-                const buttons = document.querySelectorAll('.bbb');
 
                 function closeMenu() {
                     menu.style.transform = "translate(200%, 0%)";
@@ -77,24 +65,11 @@
 
                         menu.classList.remove('show');
                     }, 500);
-
+                    
                     setTimeout(function() {
                         overlay.style.display = 'none';
                     }, 300);
-
-                    buttons.forEach(function(button) {
-                        button.style.color = 'white';
-                        const buttonSpan = button.querySelector('span')
-                        const buttonBefore = document.createElement('style');
-                        
-                        const bbbStyleTag = document.createElement('style');
-                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: rgba(246, 244, 235, 1); } .bbb:hover { color: black !important; }';
-                        document.head.appendChild(bbbStyleTag);
-
-                        buttonSpan.style.border = '4px solid white';
-                        buttonSpan.style.background = 'rgba(246, 244, 235, 0.2)';
-                    });
-                };
+                }
 
                 menuIcon.addEventListener('click', function() {
                     if (menu.classList.contains('show')) {
@@ -110,21 +85,6 @@
                         wideOnlyNav.forEach(function(navItem) {
                             navItem.style.display = 'none';
                             });
-
-                        buttons.forEach(function(button) {
-                            const buttonSpan = button.querySelector('span')
-                            button.style.color = 'black';
-                            buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                            buttonSpan.style.border = '4px solid black';
-                        });
-
-                        const buttonBefore = document.createElement('style');
-                        buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
-                        document.head.appendChild(buttonBefore);
-
-                        const bbbStyleTag = document.createElement('style');
-                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
-                        document.head.appendChild(bbbStyleTag);
 
                         menu.style.transform = 'translate(200%, 0%)';
                         menu.style.transition = "all 0.7s";
@@ -148,5 +108,4 @@
             });
         </script>
     </body>
-</html>
 </html>
