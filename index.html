@@ -67,6 +67,8 @@
                 const buttons = document.querySelectorAll('.bbb');
 
                 function closeMenu() {
+                    document.body.style.overflow = 'auto';
+                    document.body.style.overflowX = 'hidden';
                     menu.style.transform = "translate(200%, 0%)";
                     setTimeout(function() {
                         wideOnlyNav.forEach(function(navItem) {
@@ -98,6 +100,7 @@
                     if (menu.classList.contains('show')) {
                         closeMenu();
                     } else {
+                        document.body.style.overflow = 'hidden';
                         menu.classList.toggle('show');
                         if (window.innerWidth < 600) { 
                                 menu.style.display = "flex";
@@ -147,6 +150,28 @@
                     const fadeButtons = document.querySelectorAll('.bbb');
                     const scrollPosition = window.scrollY;
 
+                    fadeButtons.forEach(function(element) {
+                        if (scrollPosition > 0) {
+                            const buttonSpan = element.querySelector('span')
+                            element.style.color = "rgba(0, 0, 0, 0)";
+                            buttonSpan.style.background = "rgba(0, 0, 0, 0)";
+                            buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
+
+                            setTimeout(function() {
+                                element.style.display = "none";
+                            }, 600);
+                        } else {
+
+                            element.style.color = "white";
+                            const buttonSpan = element.querySelector('span')
+                            buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
+                            buttonSpan.style.border = "4px solid white";
+
+                            setTimeout(function() {
+                                element.style.display = "block";
+                            }, 600);
+                        }
+                    });
                 });
             });
         </script>
