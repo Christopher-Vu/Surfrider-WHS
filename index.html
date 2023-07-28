@@ -63,8 +63,8 @@
             <h2 class="about-header highlight-animation">The Surfrider Foundation</h2>
             
             <div class="carousel-wrapper">
-                <div class="color-box-1"></div>
-                <div class="carousel">
+                <div class="color-box-1 fade-in-scroll-slow"></div>
+                <div class="carousel fade-in-scroll">
                     <div class="slide" style="background-image: url('images/Surfrider1.png');"></div>
                     <div class="slide" style="background-image: url('images/Surfrider2.png');"></div>
                     <div class="slide" style="background-image: url('images/Surfrider3.png');"></div>
@@ -94,7 +94,43 @@
         </body>
 
         <script>
+            const fadeElements = document.querySelectorAll('.fade-in-scroll');
+            const fadeSlowElements = document.querySelectorAll('.fade-in-scroll-slow');
+
+            function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            function fadeInElement(element) {
+                if (isElementInViewport(element)) {
+                    element.style.animation = "fadeInScroll 1s forwards";
+                    window.removeEventListener('scroll', () => fadeInElement(element));
+                }
+            }
+            
+            function fadeInElementSlow(element) {
+                if (isElementInViewport(element)) {
+                    element.style.animation = "fadeInScroll 2s forwards";
+                    window.removeEventListener('scroll', () => fadeInElementSlow(element));
+                }
+            }
+
+            fadeElements.forEach((element) => {
+                window.addEventListener('scroll', () => fadeInElement(element));
+                fadeInElement(element);
+            });
+
+            fadeSlowElements.forEach((element) => {
+                window.addEventListener('scroll', () => fadeInElementSlow(element));
+                fadeInElementSlow(element);
+            });
+
             const slides = document.querySelectorAll('.slide');
+
             let currentSlide = 0;
 
             function showSlide(slideIndex) {

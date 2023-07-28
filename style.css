@@ -582,3 +582,18 @@ body {
 .next-btn-2 {
     right: 14%;
 }
+
+@keyframes fadeInScroll {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-scroll, .fade-in-scroll-slow {
+    opacity: 0;
+}
