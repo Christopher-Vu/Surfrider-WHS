@@ -16,7 +16,7 @@
                 <div class="navbar">
                     <div class="menu-icon navbar-item fade-in-fast fade-down" style="float: right;">≡</div> 
                     <a href="index.html" class="home-icon navbar-item fade-in-fast fade-down" style="float: right;">⌂</a> 
-                    <a href="#about_us" class="navbar-item fade-in wide-only-nav fade-down" style="float: right;">ABOUT US</a>
+                    <a href="#about-us" class="navbar-item fade-in wide-only-nav fade-down" style="float: right;">ABOUT US</a>
                     <a href="news.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">NEWS</a>
                     <a href="cabinet.html" class="navbar-item wide-only-nav fade-in fade-down" style="float: right;">CABINET</a>
                 </div>
@@ -56,10 +56,52 @@
             <div class="menu-spacer"></div>
         </div>
 
-        <div id="about-section-1" style="top: 100vh;"><br><br><br><br><br></div>
+        <div class="about-border"></div>
+
+        <div id="about-us" class="about-section about-1">
+            <br><br>
+            <h2 class="about-header highlight-animation">The Surfrider Foundation</h2>
+            
+            <div class="carousel-wrapper">
+                <div class="color-box-1"></div>
+                <div class="carousel">
+                    <div class="slide" style="background-image: url('images/Surfrider1.png');"></div>
+                    <div class="slide" style="background-image: url('images/Surfrider2.png');"></div>
+                    <div class="slide" style="background-image: url('images/Surfrider3.png');"></div>
+
+                    <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+
+            <br><br><br>
+
+        </div>
         </body>
 
         <script>
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            function showSlide(slideIndex) {
+                slides.forEach((slide, index) => {
+                    slide.style.opacity = index === slideIndex ? '1' : '0';
+                });
+                currentSlide = slideIndex;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            showSlide(currentSlide);
+
             document.addEventListener('DOMContentLoaded', function () {
                 const menuIcon = document.querySelector('.menu-icon');
                 const menu = document.querySelector('.menu');
