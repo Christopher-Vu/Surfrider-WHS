@@ -193,6 +193,22 @@ body {
 }
 
 @media (max-width: 600px) {
+    .carousel-btn-2 {
+        top: 100% !important;
+    }
+
+    .about-p {
+        font-size: 1em !important;
+        width: 80% !important;
+        text-align: center;
+        transform: translateX(10%) !important;
+    }
+
+    .about-header {
+        font-size: 25px !important;
+        margin-bottom: 45px;
+    }
+
     .menu-header {
         padding-top: 60px !important;
     }
@@ -233,6 +249,25 @@ body {
 }
 
 @media (max-aspect-ratio: 1/1) {
+    .carousel-btn-2 {
+        font-size: 1.5em !important;
+    }
+    
+    .carousel {
+        width: 75vw !important; 
+        height: 40vw !important; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .color-box-1 {
+        transform: translateY(10%) !important;
+        position: absolute;
+        width: 90% !important;
+        height: 20% !important;
+        background-color: #C4DFDF;
+    }
+
       .bbb {
         width: 25vw !important;
         font-size: 1em !important;
@@ -464,23 +499,12 @@ body {
     opacity: 1;
 }
 
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 .prev-btn {
     left: 10px;
 }
 
 .next-btn {
-    right: 10px;
+    right: 8px;
 }
 
 .color-box-1 {
@@ -497,4 +521,64 @@ body {
 
     width: 100%;
     color: black;
+}
+
+.about-p {
+    font-size: 1.5em;
+    color:black;
+    width: 50%;
+    transform: translateX(25vw);
+    position: relative;
+}
+
+.carousel-btn-1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.carousel-btn-1:hover {
+    color: white;
+}
+
+.carousel-btn-2 {
+    transition: all 0.5s;
+    padding: clamp(13px, 0.5em, 0.5em);
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+
+    font-size: 2em;
+    background-color: white;
+    color: #090B14;
+    border-radius: 100%;
+    border: 2px solid #090B14;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-btn-2:hover {
+    background-color: #090B14;
+    color: white;
+    border-radius: 100%;
+    border: 10px solid #F6F4EB;
+}
+
+.prev-btn-2 {
+    left: 12%;
+}
+
+.next-btn-2 {
+    right: 14%;
 }
