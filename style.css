@@ -226,6 +226,10 @@ body {
     .menu-spacer {
         flex: 1;
     }
+
+    .scroll-instructions {
+        font-size: 1vh !important;
+    }
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -382,4 +386,22 @@ body {
 
 .wide-only-nav {
     display: block;
+}
+
+.scroll-instructions {
+    background: linear-gradient(
+        to bottom ,
+        transparent 60%,
+        #ff7276 60%
+    );
+
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    width: 22ch;
+
+    animation: typing 2s steps(64), .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s;
 }

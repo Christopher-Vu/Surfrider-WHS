@@ -25,6 +25,7 @@
             <p class="title fade-in-fast fade-title" style="transform: translate(7vw, 26vh);">WHS<br>SURFRIDER</p>
             <p class="statement" style="width: 51ch; animation: typing 3.5s steps(64), .5s step-end infinite alternate;">dedicated to the protection and enjoyment of the world’s ocean,</p>
             <p class="statement" style="transform: translate(10vw, 42vh);">waves, and beaches, for all people, through a powerful activist network</p>
+            <p class="scroll-instructions" style="transform: translate(10vw, 46vh);">SCROLL TO EXPLORE</p>
             
             <a href="sign_up.html" class="bbb bbb1 fade-in-fast fade-up">Sign Up<span></span></a>
             <a href="volunteer.html" class="bbb bbb2 fade-in-fast fade-up">Volunteer<span></span></a>
@@ -149,7 +150,13 @@
                 window.addEventListener('scroll', function() {
                     const fadeButtons = document.querySelectorAll('.bbb');
                     const scrollPosition = window.scrollY;
-
+                    const scrollInstructions = document.querySelector('.scroll-instructions');
+                    
+                    if (scrollPosition > 0) {
+                        scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
+                        scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
+                    }
+                    
                     fadeButtons.forEach(function(element) {
                         if (scrollPosition > 0) {
                             const buttonSpan = element.querySelector('span')
