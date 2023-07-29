@@ -199,7 +199,7 @@ body {
         height: 30vh !important;
     }
 
-    #links-header {
+    #slinks-header {
         font-size: 2.1em !important;
         margin-top: 5vh !important;
     }
@@ -215,6 +215,14 @@ body {
     
     .slink:hover {
         font-size: 1.1em !important;
+    }
+
+    .prev-btn-2 {
+        left: 20vw !important;
+    }
+
+    .next-btn-2 {
+        right: 20vw !important;
     }
 
     .carousel-btn-2 {
@@ -665,7 +673,7 @@ body {
     background-attachment: fixed;   
 }
 
-#links-header {
+#slinks-header {
     text-align: center;
     font-family: Georgia;
     font-size: 3em;
@@ -709,4 +717,8 @@ body {
     color: white;
     font-size: 2.1em;
     margin-top: 4vh;
+}
+
+#about-2 {
+    background-color: #91C8E4;
 }
