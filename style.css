@@ -445,6 +445,7 @@ body {
 
 .wide-only-nav {
     display: block;
+    transition: all 0.7s;
 }
 
 .scroll-instructions {
@@ -467,13 +468,13 @@ body {
 
 .about-section {
     width: 100vw;
+}
+
+.about-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.about-1 {
     z-index: -4;
     background-color: #F6F4EB; 
 }
@@ -655,7 +656,6 @@ body {
 
 #slinks-bg {
     position: relative;
-    margin-bottom: 20vh; 
     margin-top: 5vh; 
     height: 40vh;
     width: 100%;

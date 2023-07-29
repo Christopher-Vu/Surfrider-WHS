@@ -102,6 +102,10 @@
                 </div>
             </div>
         </div>
+        
+        <div id="about-us" class="about-section about-2"> 
+
+        </div>
         </body>
 
         <script>
@@ -266,9 +270,15 @@
                             element.style.color = "rgba(0, 0, 0, 0)";
                             buttonSpan.style.background = "rgba(0, 0, 0, 0)";
                             buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
+                            wideOnlyNav.forEach(function(navItem) {
+                                navItem.style.color = 'rgba(0, 0, 0, 0)';
+                            });
 
                             setTimeout(function() {
                                 element.style.display = "none";
+                                wideOnlyNav.forEach(function(navItem) {
+                                    navItem.style.display = 'none';
+                                });
                             }, 600);
                         } else {
 
@@ -276,9 +286,15 @@
                             const buttonSpan = element.querySelector('span')
                             buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
                             buttonSpan.style.border = "4px solid white";
+                            wideOnlyNav.forEach(function(navItem) {
+                                navItem.style.color = '#454545';
+                            });
 
                             setTimeout(function() {
                                 element.style.display = "block";
+                                wideOnlyNav.forEach(function(navItem) {
+                                    navItem.style.display = 'block';
+                                });
                             }, 600);
                         }
                     });
