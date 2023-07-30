@@ -96,9 +96,9 @@
                 <h2 id="slinks-header" class="invert">Official Surfrider Foundation Links</h2>
                 <div id="link-line-break" class="invert"></div>
                 <div id="link-flexbox" class="fade-in-scroll">
-                    <a href="https://www.surfrider.org/campaigns" class="slink">campaigns</a>
-                    <a href="https://www.surfrider.org/action" class="slink">petitions</a>
-                    <a href="https://volunteer.surfrider.org/" class="slink">events</a>
+                    <a href="https://www.surfrider.org/campaigns" target="_blank" class="slink">campaigns</a>
+                    <a href="https://www.surfrider.org/action" target="_blank" class="slink">petitions</a>
+                    <a href="https://volunteer.surfrider.org/" target="_blank" class="slink">events</a>
                 </div>
             </div>
         </div>
@@ -112,35 +112,35 @@
                         <div class="goal-title"><span class="invert">Plastic</span><br>Reduction</div>
                     </div>
                     <p class="goal-p">Managing plastic pollution and minimizing its effect on marine environment</p>
-
+                    <a href="https://www.surfrider.org/initiatives/plastic-pollution" target="_blank" class="goal-button">Learn More<span></span></a>
                 </div>
                 <div class="goal-card">
                     <div class="goal-image" style="background-image: url('images/ocean-protection.jpg');">
                         <div class="goal-title invert">Ocean<br>Protection</div>
                     </div>
                     <p class="goal-p">Protecting marine ecosystems and addressing issues that jeopardize its vitality</p>
-
+                    <a href="https://www.surfrider.org/initiatives/ocean-protection" target="_blank" class="goal-button">Learn More<span></span></a>
                 </div>
                 <div class="goal-card">
                     <div class="goal-image" style="background-image: url('images/beach-access.jpg');">
                         <div class="goal-title invert">Beach<br>Access</div>
                     </div>
                     <p class="goal-p">Ensuring equitable access to beaches and influencing policy makers to support fair access</p>
-
+                    <a href="https://www.surfrider.org/initiatives/beach-access" target="_blank" class="goal-button">Learn More<span></span></a>
                 </div>
                 <div class="goal-card">
                     <div class="goal-image" style="background-image: url('images/coast-and-climate.jpg');">
                         <div class="goal-title invert">Coast and<br>Climate</div>
                     </div>
                     <p class="goal-p">Defending natural shorelines and inhibit issues that endanger them</p>
-
+                    <a href="https://www.surfrider.org/initiatives/coast-climate" target="_blank" class="goal-button">Learn More<span></span></a>
                 </div>
                 <div class="goal-card">
                     <div class="goal-image" style="background-image: url('images/clean-water.jpg');">
                         <div class="goal-title">Clean<br><span class="invert">Water</span></div>
                     </div>
                     <p class="goal-p">Supporting the access to, sustainability of, and cleanliness of water</p>
-
+                    <a href="https://www.surfrider.org/initiatives/clean-water" target="_blank" class="goal-button">Learn More<span></span></a>
                 </div>
             </div>
             
@@ -152,6 +152,7 @@
         <script>
             const fadeElements = document.querySelectorAll('.fade-in-scroll');
             const fadeSlowElements = document.querySelectorAll('.fade-in-scroll-slow');
+            const colorBox3 = document.getElementById("color-box-3");
 
             function isElementInViewport(element) {
                 const rect = element.getBoundingClientRect();
@@ -161,6 +162,7 @@
                 );
             }
 
+
             function fadeInElement(element) {
                 if (isElementInViewport(element)) {
                     element.style.animation = "fadeInScroll 1s forwards";
@@ -168,6 +170,7 @@
                 }
             }
             
+
             function fadeInElementSlow(element) {
                 if (isElementInViewport(element)) {
                     element.style.animation = "fadeInScroll 2s forwards";
@@ -184,6 +187,8 @@
                 window.addEventListener('scroll', () => fadeInElementSlow(element));
                 fadeInElementSlow(element);
             });
+
+
 
             const slides = document.querySelectorAll('.slide');
 
