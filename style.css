@@ -188,165 +188,6 @@ body {
   }
 }
 
-@media (min-width: 601px) {
-    .top-header {
-        padding-top: 100px !important;
-    }
-}
-
-@media (max-width: 600px) {
-    #about-header-2 {
-        margin: 4vh !important;
-    }
-
-    #slinks-bg {
-        height: 30vh !important;
-    }
-
-    #slinks-header {
-        font-size: 2.1em !important;
-        margin-top: 5vh !important;
-    }
-
-    #link-line-break {
-        width: 80% !important;
-        margin-left: 10% !important;
-    }
-
-    .slink {
-        font-size: 1em !important;
-    }
-    
-    .slink:hover {
-        font-size: 1.1em !important;
-    }
-
-    .prev-btn-2 {
-        left: 20vw !important;
-    }
-
-    .next-btn-2 {
-        right: 20vw !important;
-    }
-
-    .carousel-btn-2 {
-        top: 100% !important;
-    }
-
-    .about-p {
-        font-size: 1em !important;
-        width: 80% !important;
-        text-align: center;
-        margin-left: 10% !important;
-    }
-
-    .about-header {
-        font-size: 25px !important;
-        margin-bottom: 45px;
-    }
-
-    .menu-header {
-        padding-top: 60px !important;
-    }
-
-    .wide-only-nav {
-        display: none !important;
-    }
-
-    .wide-only {
-        display: none !important;
-    }
-
-    .menu {
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100vh;
-    }
-
-    .menu-header {
-        font-size: 1.8em;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu-section{
-        padding-left: 25%;
-        padding-right: 25%;
-        flex: 1;
-    }
-
-    .menu-spacer {
-        flex: 1;
-    }
-
-    .scroll-instructions {
-        font-size: 1vh !important;
-    }
-}
-
-@media (max-aspect-ratio: 1/1) {
-    .goal-p {
-        font-size: 1.5em;
-    }
-
-    #goal-flexbox {
-        width: 80% !important;
-        height: 80vh !important;
-        flex-direction: column !important;
-    }
-
-    .goal-card {
-        width: 100% !important;
-    }
-
-    .carousel-btn-2 {
-        font-size: 1.5em !important;
-    }
-    
-    .carousel {
-        width: 75vw !important; 
-        height: 40vw !important; 
-        overflow: hidden;
-        position: relative;
-    }
-
-    .color-box-1 {
-        margin-top: 7% !important;
-        position: absolute;
-        width: 90% !important;
-        height: 20% !important;
-        background-color: #C4DFDF;
-    }
-
-      .bbb {
-        width: 25vw !important;
-        font-size: 1em !important;
-        padding-top:0.8em !important;
-        padding-bottom: 0.8em !important;
-    }
-
-    .bbb1 {
-        left: 7vw !important;
-    }
-
-    .bbb2 {
-        right: 7vw !important;
-    }
-
-      .statement {
-        font-size: calc(100vw / 39); 
-    }
-
-
-      .title {
-        transform: translate(10vw, 38vh) !important;
-    }
-
-    .menu {
-        width: 100%;
-    }
-}
-
 .bbb { 
     transition: all 0.7s;
     font-size: clamp(10px, 1.5em, 100px);
@@ -808,6 +649,10 @@ body {
 }
 
 .goal-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 20%;
     text-align: center;
     font-size: 2em;
@@ -836,18 +681,19 @@ body {
 }
 
 .goal-button {
+    left: 50%;
+    transform: translateX(-50%);
     width: 45%;
-    margin-left: 10%;
     border-radius: 8px;
-    border: 3px solid black; 
+    border: 3px solid #454545; 
     display: block;
     position: absolute;
     padding: 0.5em 2em;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.25em;
     overflow: hidden;
     color: black;
-    bottom: 7%;
+    bottom: 5%;
 }
 
 .goal-button span {
@@ -865,7 +711,7 @@ body {
     display: block;
     position: absolute;
     width: 8%;
-    height: 500%;
+    height: 1000%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-60deg);
@@ -880,4 +726,175 @@ body {
 
 .goal-button:hover {
     color: white;
+    border: 3px solid black; 
+}
+
+
+@media (min-width: 601px) {
+    .top-header {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    #goal-flexbox {
+        width: 80%;
+        height: 160vh;
+        flex-direction: column;
+    }
+
+    #about-header-2 {
+        margin: 4vh;
+    }
+
+    #slinks-bg {
+        height: 30vh;
+    }
+
+    #slinks-header {
+        font-size: 2.1em;
+        margin-top: 5vh;
+    }
+
+    #link-line-break {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .slink {
+        font-size: 1em;
+    }
+    
+    .slink:hover {
+        font-size: 1.1em;
+    }
+
+    .prev-btn-2 {
+        left: 20vw;
+    }
+
+    .next-btn-2 {
+        right: 20vw;
+    }
+
+    .carousel-btn-2 {
+        top: 100%;
+    }
+
+    .about-p {
+        font-size: 1em;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+    }
+
+    .about-header {
+        font-size: 25px;
+        margin-bottom: 45px;
+    }
+
+    .menu-header {
+        padding-top: 60px;
+    }
+
+    .wide-only-nav {
+        display: none;
+    }
+
+    .wide-only {
+        display: none;
+    }
+
+    .menu {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .menu-header {
+        font-size: 1.8em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-section{
+        padding-left: 25%;
+        padding-right: 25%;
+        flex: 1;
+    }
+
+    .menu-spacer {
+        flex: 1;
+    }
+
+    .scroll-instructions {
+        font-size: 1vh;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .goal-p {
+        font-size: 1em;
+    }
+
+    .goal-title {
+        padding-top: 0;
+        font-size: 1.5em;
+    }
+
+    #goal-flexbox {
+        width: 80%;
+        height: 120vh;
+        flex-direction: column;
+    }
+
+    .goal-card {
+        width: 80%;
+    }
+
+    .carousel-btn-2 {
+        font-size: 1.5em;
+    }
+    
+    .carousel {
+        width: 75vw; 
+        height: 40vw; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .color-box-1 {
+        margin-top: 7%;
+        position: absolute;
+        width: 90%;
+        height: 20%;
+        background-color: #C4DFDF;
+    }
+
+    .bbb {
+        width: 25vw;
+        font-size: 1em;
+        padding-top:0.8em;
+        padding-bottom: 0.8em;
+    }
+
+    .bbb1 {
+        left: 7vw;
+    }
+
+    .bbb2 {
+        right: 7vw;
+    }
+
+    .statement {
+        font-size: calc(100vw / 39); 
+    }
+
+    .title {
+        transform: translate(10vw, 38vh);
+    }
+
+    .menu {
+        width: 100%;
+    }
 }
