@@ -655,7 +655,6 @@ body {
 }
 
 #color-box-2 {
-    margin-top: 5%;
     position: absolute;
     width: 90%;
     height: 60%;
@@ -757,14 +756,16 @@ body {
 
 #about-3 {
     position: relative;
-    height: 50vh;
     width: 100%;
     border: 4px solid black;
     display: flex;
     flex-direction: column;
+    padding-top: 35px;
+    padding-bottom: 50px;
  
     background-image: url('images/contributing.png');
     background-attachment: fixed;   
+    margin-bottom: 100px;
 }
 
 .invert {
@@ -772,7 +773,9 @@ body {
     mix-blend-mode: difference; /*this is actually so cool*/
 }
 
-#about-header-3 {
+#about-header-3 {  
+    flex: 1;
+    position: relative;
     width: 92vw !important;
     align-items: center;
     width: 17ch;
@@ -781,6 +784,7 @@ body {
 }
 
 #contributing-line-break {
+    position: relative;
     background-color: white;
     position: relative;
     height: 0.4vh;
@@ -790,7 +794,8 @@ body {
 }
 
 #contributing-p {
-    margin-top: 70px;
+    flex: 3;
+    position: relative;
     text-shadow: 2px 2px 0px black;
     font-size: 2.4em;
     margin-left: 10vw;
@@ -805,15 +810,24 @@ body {
 }
 
 @media (max-aspect-ratio: 1/1) {
+    #contributing-p {
+        margin-top: 50px;
+        flex: 4;
+        font-size: 1.5em;
+        margin-left: 10vw;
+        width: 80vw;
+        color: white;
+    }
+
     #color-box-3 {
         height: 100%;
         width: 60%;
     }
 
     #color-box-2 {
-        transform: translateY(1%);
+        margin-top: 3%;
         width: 80%;
-        height: 122vh;
+        height: 124vh;
     }
 
     .goal-p {
@@ -883,6 +897,19 @@ body {
 }
 
 @media (max-width: 600px) {
+    #about-header-3 {
+        margin-bottom: 10px;
+    }
+
+    #contributing-p {
+        margin-top: 30px;
+        flex: 4;
+        font-size: 1.2em;
+        margin-left: 10vw;
+        width: 80vw;
+        color: white;
+    }
+
     #goal-note {
         font-size: 0.8em;
     }
