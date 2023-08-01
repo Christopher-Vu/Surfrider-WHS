@@ -976,25 +976,40 @@ body {
 
 
 @media (min-width: 601px) {
+    
     .top-header {
         padding-top: 100px;
     }
 }
 
 @media (max-aspect-ratio: 1/1) {
+    .b-menu {
+        height: 100vh;
+        grid-template-rows: 30vh 25vh 35vh;
+        grid-template-columns: 50vw 50vw;
+    }
+
+    .bmenu-nav{
+        padding: 20%;
+        padding-top: 30%;
+    }    
+
     .horizontal-only {
         display: none
     }
 
     #bmenu-img {
-        height: 100px;
-        width: 100px;
+        left: 20%;
+        margin-top: 20%;
+        height: 20vh;
+        width: 20vh;
+    }
+
+    #bmenu-title {
+        margin-top: 40%;
+        font-size: 2em;
     }
     
-    .b-menu {
-        grid-template-rows: 50vw 50vw;
-        grid-template-columns: auto auto auto;
-    }
 
     .gi-about {
         padding: 1em 0.5em;
@@ -1104,6 +1119,28 @@ body {
 }
 
 @media (max-width: 600px) {
+    .b-menu {
+        height: 100vh;
+        grid-template-rows: 30vh 25vh 35vh;
+        grid-template-columns: 50vw 50vw;
+    }
+
+    #bmenu-img {
+        left: 15%;
+        margin-top: 20%;
+        height: 15vh;
+        width: 15vh;
+    }
+
+    #bmenu-title {
+        margin-top: 40%;
+        font-size: 1.5em;
+    }
+
+    #email-me {
+        font-size: 12px !important;
+    }
+
     #about-header-2 {
         font-size: 2em;
     }
