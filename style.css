@@ -27,7 +27,7 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
  a, a:hover, a:focus, a:active {
@@ -924,7 +924,7 @@ body {
     height: 70vh;
     display: grid;
     grid-template-columns: 20vw 23vw 5vw 14.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
-    background-color: black;
+    background-color: royalblue;
 }
 
 .bmenu-item {
@@ -983,6 +983,10 @@ body {
 }
 
 @media (max-aspect-ratio: 1/1) {
+    .bmenu-link {
+        font-size: 1em;
+    }
+
     .b-menu {
         height: 100vh;
         grid-template-rows: 30vh 25vh 35vh;
@@ -1053,7 +1057,7 @@ body {
     }
 
     .goal-p {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .goal-title {

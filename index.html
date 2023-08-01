@@ -205,6 +205,20 @@
         </body>
 
         <script>
+            window.addEventListener("orientationchange", function () {
+            var orientation = window.screen.orientation;
+            if (orientation.type !== "portrait-primary" && orientation.type !== "portrait-secondary") {
+                // Lock the screen to portrait mode
+                if (screen.lockOrientation) {
+                screen.lockOrientation("portrait");
+                } else if (screen.mozLockOrientation) {
+                screen.mozLockOrientation("portrait");
+                } else if (screen.msLockOrientation) {
+                screen.msLockOrientation("portrait");
+                }
+            }
+            });
+            
             const fadeElements = document.querySelectorAll('.fade-in-scroll');
             const fadeSlowElements = document.querySelectorAll('.fade-in-scroll-slow');
             const colorBox3 = document.getElementById("color-box-3");
