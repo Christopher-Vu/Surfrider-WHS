@@ -21,9 +21,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -o-background-size:cover; 
-    -moz-background-size:cover; 
-    -webkit-background-size:cover; 
     background-image: url("images/waves.png");
 } 
 
@@ -371,9 +368,7 @@ body {
     transition: opacity 1s ease;
 
     background-size: cover;
-    -o-background-size:cover; 
-    -moz-background-size:cover; 
-    -webkit-background-size:cover; 
+    max-width: 1400px;
     background-position: center;
     position: absolute;
 }
@@ -516,9 +511,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -o-background-size:cover; 
-    -moz-background-size:cover; 
-    -webkit-background-size:cover; 
+    max-width: 1400px;
 }
 
 #slinks-bg {
@@ -628,9 +621,6 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     background-size: cover;
-    -o-background-size:cover; 
-    -moz-background-size:cover; 
-    -webkit-background-size:cover; 
     background-position: center;
 }
 
@@ -1066,6 +1056,10 @@ body {
 }
 
 @media (max-width: 900px) {
+    .landing-background {
+        max-width: 1400px;
+    }
+
     .b-menu {
         height: 100vh;
         grid-template-rows: 30vh 25vh 35vh;
