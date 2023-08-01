@@ -16,7 +16,7 @@
     position: relative;
     background-attachment: scroll;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,10 +24,16 @@
     background-image: url("images/waves.png");
 } 
 
+.body-wrapper {
+    overflow-x: hidden !important;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden !important;
 }
 
  a, a:hover, a:focus, a:active {
@@ -510,8 +516,9 @@ body {
     position: relative;
     margin-top: 5vh; 
     height: 40vh;
-    width: 100%;
-    border: 4px solid black;
+    width: 100vw;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
  
     background-image: url('images/surfrider-links.jpg');
     background-attachment: fixed;   
@@ -707,8 +714,9 @@ body {
 
 #about-3 {
     position: relative;
-    width: 100%;
-    border: 4px solid black;
+    width: 100vw;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
     display: flex;
     flex-direction: column;
     padding-top: 35px;
@@ -858,7 +866,7 @@ body {
     height: 70vh;
     display: grid;
     grid-template-columns: 20vw 23vw 5vw 14.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
-    background-color: rosybrown;
+    background-color:black;
 }
 
 .bmenu-item {
@@ -1279,6 +1287,10 @@ body {
 
     .bmenu-link:active{
         color: white;
+    }
+
+    .bmenu-link {
+        font-size: 0.8em;
     }
 }
 
