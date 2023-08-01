@@ -923,8 +923,8 @@ body {
     width: 100vw;
     height: 70vh;
     display: grid;
-    grid-template-columns: 20vw 23vw 5vw 14.5vw 12.5vw 12.5vw 12.5vw 12.5vw !important;
-    background-color: black
+    grid-template-columns: 20vw 23vw 5vw 14.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+    background-color: black;
 }
 
 .bmenu-item {
@@ -939,18 +939,18 @@ body {
     background-image: url('images/logo-2.png'); 
     top: 25%;
     left: 40%;
-    width: 50%;
-    height: 30%;
+    width: 150px;
+    height: 150px;
     padding: 0;
 }
 
 #bmenu-title {
     font-weight: bold;
-    margin-top: 35%;
+    margin-top: 45%;
     width: 100%;
     height: 40%;
     color: white;
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
 .bmenu-nav {
@@ -966,9 +966,14 @@ body {
     transition: all 0.7s;
 }
 
+.bmenu-link:visited {
+    color: #909090;
+}
+
 .bmenu-link:hover {
     color: white;
 }
+
 
 @media (min-width: 601px) {
     .top-header {
@@ -977,6 +982,20 @@ body {
 }
 
 @media (max-aspect-ratio: 1/1) {
+    .horizontal-only {
+        display: none
+    }
+
+    #bmenu-img {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .b-menu {
+        grid-template-rows: 50vw 50vw;
+        grid-template-columns: auto auto auto;
+    }
+
     .gi-about {
         padding: 1em 0.5em;
         font-size: 1.5em;
