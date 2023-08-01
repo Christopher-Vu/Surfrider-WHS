@@ -50,10 +50,6 @@ body {
     float:left;
 }
 
-.navbar-item:hover{
-    background-color: rgba(250, 244, 235, 0.4);
-    transition: 500ms;
-}
 
 .overlay {
     display: none;
@@ -91,7 +87,6 @@ body {
     transition: 0.5s;
 }
 
-.menu-item:hover {--_p: 100%}
 
 
 .menu {
@@ -145,15 +140,6 @@ body {
     font-weight: 100;
 }
 
-.menu-icon:hover {
-    background-color: rgba(250, 244, 235, 0.4);
-    color: gray;
-}
-
-.home-icon:hover {
-    background-color: rgba(250, 244, 235, 0.4);
-    color: gray;
-}
 
 .title {
     margin: 0;
@@ -300,15 +286,6 @@ body {
   transition: all 0.4s;
 }
 
-.bbb:hover span::before {
-  transform: translate(-50%, -50%) rotate(-90deg);
-  width: 100%;
-  background: rgba(246, 244, 235, 1);
-}
-
-.bbb:hover {
-    color: black !important;
-}
 
 .wide-only-nav {
     display: block;
@@ -436,9 +413,6 @@ body {
     transition: all 0.5s;
 }
 
-.carousel-btn-1:hover {
-    color: white;
-}
 
 .carousel-btn-2 {
     transition: all 0.5s;
@@ -460,13 +434,6 @@ body {
     font-weight: bolder;
     position: absolute;
     top: 50%;
-}
-
-.carousel-btn-2:hover {
-    background-color: #090B14;
-    color: white;
-    border-radius: 100%;
-    border: 10px solid #F6F4EB;
 }
 
 .prev-btn-2 {
@@ -585,13 +552,6 @@ body {
     font-size: 2em;
     margin-top: 5vh;
     transition: color 0.5s, margin-top 0.3s, font-size 0.3s;
-}
-
-.slink:hover {
-    color: black;
-    font-weight: bold;
-    font-size: 2.1em;
-    margin-top: 4vh;
 }
 
 #about-2 {
@@ -745,17 +705,6 @@ body {
     transition: all 0.5s;
 }
 
-.goal-button:hover span::before {
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 100%;
-    background: black;
-}
-
-.goal-button:hover {
-    color: white;
-    border: 3px solid black; 
-}
-
 #about-3 {
     position: relative;
     width: 100%;
@@ -883,16 +832,6 @@ body {
     transition: all 0.5s;
 }
 
-.gi-button:hover span::before {
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 100%;
-    background: black;
-}
-
-.gi-button:hover {
-    color: white;
-}
-
 .gi-button:active span::before {
     background: black;
 }
@@ -909,11 +848,6 @@ body {
     flex: 1;
     height: 20%;
     margin: 5%;
-}
-
-.gi-about:hover {
-    border: 4px solid black;
-    font-weight: bold;
 }
 
 .b-menu {
@@ -970,17 +904,6 @@ body {
     color: #909090;
 }
 
-.bmenu-link:hover {
-    color: white;
-}
-
-
-@media (min-width: 901px) {
-    
-    .top-header {
-        padding-top: 100px;
-    }
-}
 
 @media (max-aspect-ratio: 1/1) {
     .bmenu-link {
@@ -1281,5 +1204,162 @@ body {
 
     .scroll-instructions {
         font-size: 1vh;
+    }
+
+    .navbar-item:active{
+        background-color: rgba(250, 244, 235, 0.4);
+        transition: 500ms;
+    }
+
+    .menu-item:active{--_p: 100%}
+
+    .menu-icon:active{
+        background-color: rgba(250, 244, 235, 0.4);
+        color: gray;
+    }
+
+    .home-icon:active{
+        background-color: rgba(250, 244, 235, 0.4);
+        color: gray;
+    }
+
+    .bbb:active span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(246, 244, 235, 1);
+    }
+
+    .bbb:active{
+        color: black !important;
+    }
+
+    .carousel-btn-1:active{
+        color: white;
+    }
+
+    .carousel-btn-2:active{
+        background-color: #090B14;
+        color: white;
+        border-radius: 100%;
+        border: 10px solid #F6F4EB;
+    }
+
+    .slink:active{
+        color: black;
+        font-weight: bold;
+        font-size: 2.1em;
+        margin-top: 4vh;
+    }
+
+    .goal-button:active span::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100%;
+        background: black;
+    }
+
+    .goal-button:active{
+        color: white;
+        border: 3px solid black; 
+    }
+
+    .gi-button:active span::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100%;
+        background: black;
+    }
+
+    .gi-button:active{
+        color: white;
+    }
+
+    .gi-about:active{
+        border: 4px solid black;
+        font-weight: bold;
+    }
+
+    .bmenu-link:active{
+        color: white;
+    }
+}
+
+@media (min-width: 901px) {
+    
+    .top-header {
+        padding-top: 100px;
+    }
+
+    .navbar-item:hover{
+        background-color: rgba(250, 244, 235, 0.4);
+        transition: 500ms;
+    }
+
+    .menu-item:hover {--_p: 100%}
+
+    .menu-icon:hover {
+        background-color: rgba(250, 244, 235, 0.4);
+        color: gray;
+    }
+
+    .home-icon:hover {
+        background-color: rgba(250, 244, 235, 0.4);
+        color: gray;
+    }
+
+    .bbb:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(246, 244, 235, 1);
+    }
+
+    .bbb:hover {
+        color: black !important;
+    }
+
+    .carousel-btn-1:hover {
+        color: white;
+    }
+
+    .carousel-btn-2:hover {
+        background-color: #090B14;
+        color: white;
+        border-radius: 100%;
+        border: 10px solid #F6F4EB;
+    }
+
+    .slink:hover {
+        color: black;
+        font-weight: bold;
+        font-size: 2.1em;
+        margin-top: 4vh;
+    }
+
+    .goal-button:hover span::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100%;
+        background: black;
+    }
+
+    .goal-button:hover {
+        color: white;
+        border: 3px solid black; 
+    }
+
+    .gi-button:hover span::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100%;
+        background: black;
+    }
+
+    .gi-button:hover {
+        color: white;
+    }
+
+    .gi-about:hover {
+        border: 4px solid black;
+        font-weight: bold;
+    }
+
+    .bmenu-link:hover {
+        color: white;
     }
 }
