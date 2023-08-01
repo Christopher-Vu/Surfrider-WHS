@@ -858,7 +858,7 @@ body {
     height: 70vh;
     display: grid;
     grid-template-columns: 20vw 23vw 5vw 14.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
-    background-color:black;
+    background-color: rosybrown;
 }
 
 .bmenu-item {
