@@ -21,6 +21,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
     background-image: url("images/waves.png");
 } 
 
@@ -368,6 +371,9 @@ body {
     transition: opacity 1s ease;
 
     background-size: cover;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
     background-position: center;
     position: absolute;
 }
@@ -510,6 +516,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
 }
 
 #slinks-bg {
@@ -619,6 +628,9 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     background-size: cover;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
     background-position: center;
 }
 
