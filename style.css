@@ -1062,7 +1062,6 @@ body {
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
     .menu-1 {
         margin-top: 50px;
-        background-color: blue;
     }
 
     #about-3 {
