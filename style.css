@@ -988,9 +988,9 @@ body {
     }
 
     #color-box-2 {
-        margin-top: 3%;
+        margin-top: 10%;
         width: 80%;
-        height: 124vh;
+        height: 125vh;
     }
 
     .goal-p {
@@ -1024,7 +1024,6 @@ body {
     }
 
     .color-box-1 {
-        margin-top: 7%;
         position: absolute;
         width: 90%;
         height: 20%;
@@ -1062,10 +1061,12 @@ body {
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
     .menu-1 {
         margin-top: 50px;
+        background-color: black;
     }
 
     #about-3 {
-        background-attachment: scroll !important;
+        font-size: 1.5em;
+        background-attachment: scroll;
     }
 
     .bbb span {
@@ -1073,8 +1074,10 @@ body {
     }
 
     #slinks-bg {
+        padding-top: 25%;
+        padding-bottom: 25%;
         max-width: 1400px;
-        background-attachment: scroll !important;
+        background-attachment: scroll;
     }
 
     .goal-image {
@@ -1147,9 +1150,9 @@ body {
     }
 
     #color-box-2 {
-        transform: translateY(-1%);
+        transform: translateY(2%);
         width: 87%;
-        height: 164vh;
+        height: 170vh;
     }
     
     #goal-flexbox {
@@ -1159,7 +1162,8 @@ body {
     }
 
     #about-header-2 {
-        margin: 4vh;
+        margin-top: 7vh;
+        margin-bottom: 14vh;
     }
 
     #slinks-bg {
@@ -1193,14 +1197,15 @@ body {
     }
 
     .carousel-btn-2 {
-        top: 100%;
+        top: 0%;
     }
 
     .about-p {
-        font-size: 1em;
+        margin-top: 12vh;
         width: 80%;
         text-align: center;
         margin-left: 10%;
+        margin-bottom: 0;
     }
 
     .about-header {
