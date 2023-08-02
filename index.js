@@ -18,9 +18,12 @@ const colorBox3 = document.getElementById("color-box-3");
 
 function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
+    const elementHeight = rect.bottom - rect.top;
+    const threshold = 0.5; 
+
     return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        rect.bottom >= (elementHeight * threshold) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) - (elementHeight * threshold)
     );
 }
 
