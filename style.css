@@ -1325,12 +1325,15 @@ body {
     }
 
     .news {
-        flex: 0.5;
+        flex: 0.63;
     }
 }
 
 @media (pointer: fine) {
-    
+    .narrow-only {
+        display: none;
+    }
+
     .top-header {
         padding-top: 100px;
     }
