@@ -919,12 +919,6 @@ body {
     color: #909090;
 }
 
-
-.narrow-only .menu-spacer {
-    flex: 0.25;
-    background-color: blue;
-}
-
 @media (max-aspect-ratio: 1/1) {
     .bmenu-link {
         font-size: 1em;
@@ -1066,7 +1060,10 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
-    
+    .menu-1 {
+        margin-top: 50px;
+        background-color: blue;
+    }
 
     #about-3 {
         background-attachment: scroll !important;
