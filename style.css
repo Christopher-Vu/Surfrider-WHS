@@ -1323,6 +1323,10 @@ body {
     .bmenu-link {
         font-size: 0.8em;
     }
+
+    .news {
+        flex: 0.75;
+    }
 }
 
 @media (pointer: fine) {
