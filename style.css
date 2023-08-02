@@ -922,6 +922,7 @@ body {
 
 .narrow-only .menu-spacer {
     flex: 0.25;
+    background-color: blue;
 }
 
 @media (max-aspect-ratio: 1/1) {
