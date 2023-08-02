@@ -36,21 +36,21 @@
             <div class="overlay"></div>
             <div class="menu">
                 <div class="menu-section">
-                    <h2 class="menu-header top-header first-header"><b>Contribute</b></h2><br>
-                    <a href="volunteer.html" class="menu-item">Volunteer</a><br><br>
+                    <h2 class="menu-header top-header first-header"><b>Contribute</b></h2><br class="wide-only">
+                    <a href="volunteer.html" class="menu-item">Volunteer</a><br><br class="wide-only">
                     <a href="sign_up.html" class="menu-item">Sign Up</a>
                 </div>
                 <div class="menu-section top-header">
-                    <h2 class="menu-header">Updates</h2><br>
+                    <h2 class="menu-header">Updates</h2><br class="wide-only">
                     <a href="news.html" class="menu-item">News</a>
                 </div>
                 <div class="menu-section">
-                    <h2 class="menu-header">Club</h2><br>
-                    <a href="cabinet.html" class="menu-item">Cabinet</a><br><br>
+                    <h2 class="menu-header">Club</h2><br class="wide-only">
+                    <a href="cabinet.html" class="menu-item">Cabinet</a><br><br class="wide-only">
                     <a href="#about_us" class="menu-item">About Us</a>
                 </div>
                 <div class="menu-section">
-                    <h2 class="menu-header">Contact</h2><br>
+                    <h2 class="menu-header">Contact</h2><br class="wide-only">
                     <a href="instagram.com" class="menu-item">Insta Here</p>
                     <a href="mailto: surfriderfoundationwhsclub@gmail.com" class="menu-item">Email</a>
                 </div>
@@ -291,6 +291,10 @@
                 const wideOnlyNav = document.querySelectorAll('.wide-only-nav');
                 const overlay = document.querySelector('.overlay');
                 const buttons = document.querySelectorAll('.bbb');
+                const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+                
+                const isNoPointer = window.matchMedia('(pointer: none)').matches;
+                const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
                 function closeMenu() {
                     document.body.style.overflow = 'auto';
@@ -298,7 +302,9 @@
                     menu.style.transform = "translate(200%, 0%)";
                     setTimeout(function() {
                         wideOnlyNav.forEach(function(navItem) {
-                            navItem.style.display = 'block';
+                            if (!isNoPointer && !isCoarsePointer) {
+                                navItem.style.display = 'block';
+                            }
                         });
 
                         menu.classList.remove('show');
@@ -405,13 +411,17 @@
                             buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
                             buttonSpan.style.border = "4px solid white";
                             wideOnlyNav.forEach(function(navItem) {
-                                navItem.style.color = '#454545';
+                                if (!isNoPointer && !isCoarsePointer) {
+                                    navItem.style.color = '#454545';
+                                }
                             });
 
                             setTimeout(function() {
                                 element.style.display = "block";
                                 wideOnlyNav.forEach(function(navItem) {
-                                    navItem.style.display = 'block';
+                                    if (!isNoPointer && !isCoarsePointer) {
+                                        navItem.style.display = 'block';
+                                    }
                                 });
                             }, 600);
                         }

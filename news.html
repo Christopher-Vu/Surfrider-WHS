@@ -23,90 +23,190 @@
 
         <div class="overlay"></div>
         <div class="menu">
-            <div class="menu-section">
-                <h2 class="menu-header top-header first-header"><b>Contribute</b></h2><br>
-                <a href="volunteer.html" class="menu-item">Events</a><br class="wide-only"><br class="wide-only">
-                <a href="sign_up.html" class="menu-item">Sign Up</a>
+                <div class="menu-section">
+                    <h2 class="menu-header top-header first-header"><b>Contribute</b></h2><br class="wide-only">
+                    <a href="volunteer.html" class="menu-item">Volunteer</a><br><br class="wide-only">
+                    <a href="sign_up.html" class="menu-item">Sign Up</a>
+                </div>
+                <div class="menu-section top-header">
+                    <h2 class="menu-header">Updates</h2><br class="wide-only">
+                    <a href="news.html" class="menu-item">News</a>
+                </div>
+                <div class="menu-section">
+                    <h2 class="menu-header">Club</h2><br class="wide-only">
+                    <a href="cabinet.html" class="menu-item">Cabinet</a><br><br class="wide-only">
+                    <a href="#about_us" class="menu-item">About Us</a>
+                </div>
+                <div class="menu-section">
+                    <h2 class="menu-header">Contact</h2><br class="wide-only">
+                    <a href="instagram.com" class="menu-item">Insta Here</p>
+                    <a href="mailto: surfriderfoundationwhsclub@gmail.com" class="menu-item">Email</a>
+                </div>
+                <div class="menu-spacer"></div>
+                <div class="menu-spacer"></div>
             </div>
-            <div class="menu-section top-header">
-                <h2 class="menu-header">Updates</h2><br>
-                <a href="news.html" class="menu-item">News</a>
-            </div>
-            <div class="menu-section">
-                <h2 class="menu-header">Club</h2><br>
-                <a href="cabinet.html" class="menu-item">Cabinet</a><br class="wide-only"><br class="wide-only">
-                <a href="#about_us" class="menu-item">About Us</a>
-            </div>
-            <div class="menu-section">
-                <h2 class="menu-header">Contact</h2>
-                <p class="menu-item">Insta Here</p>
-                <a href="mailto: surfriderfoundationwhsclub@gmail.com" class="menu-item">Email</a>
-            </div>
-            <div class="menu-spacer"></div>
-            <div class="menu-spacer"></div>
-        </div>
 
         <!--ALL CODE GOES HERE-->
         
         <div class="b-menu">
-            <div class="bmenu-item background-div" id="bmenu-img"></div>
-            <div class="bmenu-item" id="bmenu-title">SURFRIDER FOUNDATION <br>WHS CLUB
-                <br><br><a href="https://www.surfrider.org/" target="_blank" class="bmenu-link" style="text-decoration: underline;">Surfrider.org</a>
-                <br><br class="horizontal-only"><p style="font-size: 15px; color: #F6F4EB;" id="email-me">Email any website issues <br>to christophervu4@gmail.com</p></div>
+                <div class="bmenu-item background-div" id="bmenu-img"></div>
+                <div class="bmenu-item" id="bmenu-title">SURFRIDER FOUNDATION <br>WHS CLUB
+                    <br><br><a href="https://www.surfrider.org/" target="_blank" class="bmenu-link" style="text-decoration: underline;">Surfrider.org</a>
+                    <br><br class="horizontal-only"><p style="font-size: 15px; color: #F6F4EB;" id="email-me">Email any website issues <br>to christophervu4@gmail.com</p></div>
 
-            <div></div>
+                <div class="horizontal-only"></div>
 
-            <div class="bmenu-nav">
-                <h3>Contribute</h3><br>
-                <a href="sign_up.html" class="bmenu-link">Sign Up</a><br><br><br>
-                <a href="volunteer.html" class="bmenu-link">Volunteer</a>
+                <div class="bmenu-nav">
+                    <h3>Contribute</h3><br class="horizontal-only">
+                    <a href="sign_up.html" class="bmenu-link">Sign Up</a><br><br class="wide-only"><br class="horizontal-only">
+                    <a href="volunteer.html" class="bmenu-link">Volunteer</a>
+                </div>
+
+                <div class="bmenu-nav">
+                    <h3>Updates</h3><br class="horizontal-only">
+                    <a href="news.html" class="bmenu-link">News</a>
+                </div>
+
+                <div class="bmenu-nav">
+                    <h3>Club</h3><br class="horizontal-only">
+                    <a href="cabinet.html" class="bmenu-link">Cabinet</a><br><br class="wide-only"><br class="horizontal-only">
+                    <a href="index.html#about-us" class="bmenu-link">About Us</a>
+                </div>
+
+                <div class="bmenu-nav">
+                    <h3>Contact</h3><br class="horizontal-only">
+                    <a href="instagram.com" class="bmenu-link">Insta Here</p><br class="horizontal-only">
+                    <a href="mailto: surfriderfoundationwhsclub@gmail.com" class="bmenu-link">Email</a>
+                </div>
             </div>
-
-            <div class="bmenu-nav">
-                <h3>Updates</h3><br>
-                <a href="news.html" class="bmenu-link">News</a>
-            </div>
-
-            <div class="bmenu-nav">
-                <h3>Club</h3><br>
-                <a href="cabinet.html" class="bmenu-link">Cabinet</a><br><br><br>
-                <a href="index.html#about-us" class="bmenu-link">About Us</a>
-            </div>
-
-            <div class="bmenu-nav">
-                <h3>Contact</h3><br>
-                <a href="instagram.com" class="bmenu-link">Insta Here</p><br>
-                <a href="mailto: surfriderfoundationwhsclub@gmail.com" class="bmenu-link">Email</a>
-            </div>
-        </div>
         </body>
 
         <script>
+            window.addEventListener("orientationchange", function () {
+            var orientation = window.screen.orientation;
+            if (orientation.type !== "portrait-primary" && orientation.type !== "portrait-secondary") {
+                // Lock the screen to portrait mode
+                if (screen.lockOrientation) {
+                screen.lockOrientation("portrait");
+                } else if (screen.mozLockOrientation) {
+                screen.mozLockOrientation("portrait");
+                } else if (screen.msLockOrientation) {
+                screen.msLockOrientation("portrait");
+                }
+            }
+            });
+            
+            const fadeElements = document.querySelectorAll('.fade-in-scroll');
+            const fadeSlowElements = document.querySelectorAll('.fade-in-scroll-slow');
+            const colorBox3 = document.getElementById("color-box-3");
+
+            function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+
+            function fadeInElement(element) {
+                if (isElementInViewport(element)) {
+                    element.style.animation = "fadeInScroll 1s forwards";
+                    window.removeEventListener('scroll', () => fadeInElement(element));
+                }
+            }
+            
+
+            function fadeInElementSlow(element) {
+                if (isElementInViewport(element)) {
+                    element.style.animation = "fadeInScroll 2s forwards";
+                    window.removeEventListener('scroll', () => fadeInElementSlow(element));
+                }
+            }
+
+            fadeElements.forEach((element) => {
+                window.addEventListener('scroll', () => fadeInElement(element));
+                fadeInElement(element);
+            });
+
+            fadeSlowElements.forEach((element) => {
+                window.addEventListener('scroll', () => fadeInElementSlow(element));
+                fadeInElementSlow(element);
+            });
+
+
+
+            const slides = document.querySelectorAll('.slide');
+
+            let currentSlide = 0;
+
+            function showSlide(slideIndex) {
+                slides.forEach((slide, index) => {
+                    slide.style.opacity = index === slideIndex ? '1' : '0';
+                });
+                currentSlide = slideIndex;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            showSlide(currentSlide);
+
             document.addEventListener('DOMContentLoaded', function () {
                 const menuIcon = document.querySelector('.menu-icon');
                 const menu = document.querySelector('.menu');
                 const wideOnlyNav = document.querySelectorAll('.wide-only-nav');
                 const overlay = document.querySelector('.overlay');
+                const buttons = document.querySelectorAll('.bbb');
+                const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+                
+                const isNoPointer = window.matchMedia('(pointer: none)').matches;
+                const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
                 function closeMenu() {
+                    document.body.style.overflow = 'auto';
+                    document.body.style.overflowX = 'hidden';
                     menu.style.transform = "translate(200%, 0%)";
                     setTimeout(function() {
                         wideOnlyNav.forEach(function(navItem) {
-                            navItem.style.display = 'block';
+                            if (!isNoPointer && !isCoarsePointer) {
+                                navItem.style.display = 'block';
+                            }
                         });
 
                         menu.classList.remove('show');
                     }, 500);
-                    
+
                     setTimeout(function() {
                         overlay.style.display = 'none';
                     }, 300);
-                }
+
+                    buttons.forEach(function(button) {
+                        button.style.color = 'white';
+                        const buttonSpan = button.querySelector('span')
+                        const buttonBefore = document.createElement('style');
+                        
+                        const bbbStyleTag = document.createElement('style');
+                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: rgba(246, 244, 235, 1); } .bbb:hover { color: black !important; }';
+                        document.head.appendChild(bbbStyleTag);
+
+                        buttonSpan.style.border = '4px solid white';
+                        buttonSpan.style.background = 'rgba(246, 244, 235, 0.2)';
+                    });
+                };
 
                 menuIcon.addEventListener('click', function() {
                     if (menu.classList.contains('show')) {
                         closeMenu();
                     } else {
+                        document.body.style.overflow = 'hidden';
                         menu.classList.toggle('show');
                         if (window.innerWidth < 600) { 
                                 menu.style.display = "flex";
@@ -117,6 +217,21 @@
                         wideOnlyNav.forEach(function(navItem) {
                             navItem.style.display = 'none';
                             });
+
+                        buttons.forEach(function(button) {
+                            const buttonSpan = button.querySelector('span')
+                            button.style.color = 'black';
+                            buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                            buttonSpan.style.border = '4px solid black';
+                        });
+
+                        const buttonBefore = document.createElement('style');
+                        buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
+                        document.head.appendChild(buttonBefore);
+
+                        const bbbStyleTag = document.createElement('style');
+                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
+                        document.head.appendChild(bbbStyleTag);
 
                         menu.style.transform = 'translate(200%, 0%)';
                         menu.style.transition = "all 0.7s";
@@ -131,11 +246,60 @@
                     }
                 });
 
-                // Hide the menu when clicking outside the menu container
                 document.addEventListener('click', function (event) {
                     if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
                         closeMenu();
                     }
+                });
+
+                window.addEventListener('scroll', function() {
+                    const fadeButtons = document.querySelectorAll('.bbb');
+                    const scrollPosition = window.scrollY;
+                    const scrollInstructions = document.querySelector('.scroll-instructions');
+                    
+                    if (scrollPosition > 0) {
+                        scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
+                        scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
+                    }
+                    
+                    fadeButtons.forEach(function(element) {
+                        if (scrollPosition > 0) {
+                            const buttonSpan = element.querySelector('span')
+                            element.style.color = "rgba(0, 0, 0, 0)";
+                            buttonSpan.style.background = "rgba(0, 0, 0, 0)";
+                            buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
+                            wideOnlyNav.forEach(function(navItem) {
+                                navItem.style.color = 'rgba(0, 0, 0, 0)';
+                            });
+
+                            setTimeout(function() {
+                                element.style.display = "none";
+                                wideOnlyNav.forEach(function(navItem) {
+                                    navItem.style.display = 'none';
+                                });
+                            }, 600);
+                        } else {
+
+                            element.style.color = "white";
+                            const buttonSpan = element.querySelector('span')
+                            buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
+                            buttonSpan.style.border = "4px solid white";
+                            wideOnlyNav.forEach(function(navItem) {
+                                if (!isNoPointer && !isCoarsePointer) {
+                                    navItem.style.color = '#454545';
+                                }
+                            });
+
+                            setTimeout(function() {
+                                element.style.display = "block";
+                                wideOnlyNav.forEach(function(navItem) {
+                                    if (!isNoPointer && !isCoarsePointer) {
+                                        navItem.style.display = 'block';
+                                    }
+                                });
+                            }, 600);
+                        }
+                    });
                 });
             });
         </script>
