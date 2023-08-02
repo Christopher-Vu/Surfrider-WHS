@@ -920,8 +920,8 @@ body {
 }
 
 
-.narrow-only {
-    height: 10vh;
+.narrow-only .menu-spacer {
+    flex: 0.25;
 }
 
 @media (max-aspect-ratio: 1/1) {
