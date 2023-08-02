@@ -920,6 +920,10 @@ body {
 }
 
 
+.narrow-only {
+    flex: 0.5;
+}
+
 @media (max-aspect-ratio: 1/1) {
     .bmenu-link {
         font-size: 1em;
@@ -1325,7 +1329,7 @@ body {
     }
 
     .news {
-        flex: 0.63;
+        flex: 0.8;
     }
 }
 
