@@ -1060,7 +1060,7 @@ body {
     }
 }
 
-@media (max-width: 900px) {
+@media (pointer: none), (pointer: coarse), (max-width: 900px) {
     #about-3 {
         background-attachment: scroll !important;
     }
@@ -1323,7 +1323,7 @@ body {
     }
 }
 
-@media (min-width: 901px) {
+@media (pointer: fine) {
     
     .top-header {
         padding-top: 100px;
