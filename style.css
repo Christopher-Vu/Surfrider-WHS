@@ -1061,6 +1061,8 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    
+
     #about-3 {
         background-attachment: scroll !important;
     }
@@ -1236,7 +1238,7 @@ body {
     }
 
     .menu-spacer {
-        display: none;
+        flex: 0.75;
     }
 
     .scroll-instructions {

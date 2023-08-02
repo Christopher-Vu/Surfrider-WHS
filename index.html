@@ -344,20 +344,31 @@
                             navItem.style.display = 'none';
                             });
 
-                        buttons.forEach(function(button) {
-                            const buttonSpan = button.querySelector('span')
-                            button.style.color = 'black';
-                            buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                            buttonSpan.style.border = '4px solid black';
-                        });
+                        if (isNoPointer || isCoarsePointer) {
+                            buttons.forEach(function(button) {
+                                const buttonSpan = button.querySelector('span')
+                                button.style.color = 'rgba(0, 0, 0, 0)';
+                                button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+                                buttonSpan.style.background = 'rgba(255, 255, 255, 0)';
+                                buttonSpan.style.border = '4px solid rgba(0, 0, 0, 0)';
+                            });
+                        } else {
+                            buttons.forEach(function(button) {
+                                const buttonSpan = button.querySelector('span')
+                                button.style.color = 'black';
+                                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                                buttonSpan.style.border = '4px solid black';
+                            });
 
-                        const buttonBefore = document.createElement('style');
-                        buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
-                        document.head.appendChild(buttonBefore);
+                            const buttonBefore = document.createElement('style');
+                            buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
+                            document.head.appendChild(buttonBefore);
 
-                        const bbbStyleTag = document.createElement('style');
-                        bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
-                        document.head.appendChild(bbbStyleTag);
+                            const bbbStyleTag = document.createElement('style');
+                            bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
+                            document.head.appendChild(bbbStyleTag);
+                        }
 
                         menu.style.transform = 'translate(200%, 0%)';
                         menu.style.transition = "all 0.7s";
