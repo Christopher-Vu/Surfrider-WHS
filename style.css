@@ -521,6 +521,9 @@ body {
  
     background-image: url('images/surfrider-links.png');
     background-attachment: fixed;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #slinks-header {
@@ -723,6 +726,9 @@ body {
  
     background-image: url('images/contributing.png');
     background-attachment: fixed;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .invert {
