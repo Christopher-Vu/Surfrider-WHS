@@ -368,7 +368,6 @@ body {
     transition: opacity 1s ease;
 
     background-size: cover;
-    max-width: 1400px;
     background-position: center;
     position: absolute;
 }
@@ -511,7 +510,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1400px;
 }
 
 #slinks-bg {
@@ -1056,6 +1054,14 @@ body {
 }
 
 @media (max-width: 900px) {
+    .background-div {
+        max-width: 1400px;
+    }
+
+    .goal-image {
+        max-width: 1400px;
+    }
+
     .landing-background {
         max-width: 1400px;
     }
