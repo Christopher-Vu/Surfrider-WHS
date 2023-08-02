@@ -737,6 +737,8 @@ body {
 }
 
 #about-header-3 {  
+    text-shadow: 2px 2px 0px black;
+    color: white;
     flex: 1;
     position: relative;
     width: 92vw !important;
@@ -1059,17 +1061,17 @@ body {
 }
 
 @media (max-width: 900px) {
-    .about-3 {
-        background-attachment: scroll;
+    #about-3 {
+        background-attachment: scroll !important;
     }
 
     .bbb span {
         border: 3px solid white;
     }
 
-    .background-div {
+    #slinks-bg {
         max-width: 1400px;
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
 
     .goal-image {
