@@ -1066,10 +1066,6 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
-    .title {
-        padding-top: 100px;
-    }
-
     .gi-button.gi-about {
         border: 3px solid white;
         color: white;
