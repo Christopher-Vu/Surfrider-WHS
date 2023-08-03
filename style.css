@@ -792,6 +792,7 @@ body {
 }
 
 #about-header-4 { 
+    padding-top: 50px;
     bottom: 45%;
     position: relative;
     width: 92vw !important;
@@ -971,11 +972,11 @@ body {
     }
 
     #about-4 {
-        height: 20vh;
+        height: 30vh;
     }
 
     #color-box-4 {
-        margin-top: 15%;
+        margin-top: 25%;
         padding: 0;
         height: 50%;
     }
@@ -1145,13 +1146,14 @@ body {
     }
 
     #color-box-5 {
+        margin-top: 10%;
         width: 75%;
-        height: 40%;
+        height: 30%;
     }
 
     #color-box-4 {
-        margin-top: 23%;
-        height: 43%;
+        margin-top: 30%;
+        height: 30%;
         width: 82%;
     }
 
