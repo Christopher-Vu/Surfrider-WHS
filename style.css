@@ -136,6 +136,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 100;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset;
 }
 
 .home-icon {
@@ -208,6 +209,7 @@ body {
     display: block;
     border: none;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset;
 }
 
 .hidden {
@@ -286,17 +288,17 @@ body {
 }
 
 .bbb span::before {
-  background: rgba(246, 244, 235, 0.2);
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8%;
-  height: 500%;
-  background: var(--lightgray);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-60deg);
-  transition: all 0.4s;
+    background: rgba(246, 244, 235, 0.2);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.4s;
 }
 
 
@@ -447,6 +449,8 @@ body {
     font-weight: bolder;
     position: absolute;
     top: 50%;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
 }
 
 .prev-btn-2 {
@@ -698,6 +702,7 @@ body {
     overflow: hidden;
     color: black;
     bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .goal-button span {
@@ -830,6 +835,7 @@ body {
     overflow: hidden;
     color:black;
     font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -10px 0px inset;
 }
 
 .gi-button span {
@@ -1067,6 +1073,16 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .gi-button.gi-about {
+        border: 3px solid white;
+        color: white;
+        background-color: black;
+    }
+
+    .gi-button.gi-about span {
+        background-color: black;
+    }
+
     .menu-1 {
         margin-top: 50px;
     }

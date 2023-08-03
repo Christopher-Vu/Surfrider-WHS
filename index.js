@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         fadeButtons.forEach(function(element) {
             if (scrollPosition > 0) {
+                element.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
                 const buttonSpan = element.querySelector('span')
                 element.style.color = "rgba(0, 0, 0, 0)";
                 buttonSpan.style.background = "rgba(0, 0, 0, 0)";
@@ -209,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }, 600);
             } else {
-
+                element.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
                 element.style.color = "white";
                 const buttonSpan = element.querySelector('span')
                 buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
