@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const scrollInstructions = document.querySelector('.scroll-instructions');
         
         if (scrollPosition > 0) {
+            console.log('hola');
             scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
             scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
         }
