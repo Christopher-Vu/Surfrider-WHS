@@ -10,6 +10,14 @@
     display:inline-block;
 }
 
+.landing-background-wrapper {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
 .landing-background {
     margin: 0;
     padding: 0;
@@ -20,7 +28,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("images/waves.png");
+    border-bottom-left-radius: 20vw;
 } 
 
 .body-wrapper {
@@ -1084,6 +1092,7 @@ body {
     }
 
     .landing-background {
+        border-bottom-left-radius: 15vh;
         max-width: 1400px;
         background-attachment: scroll;
     }
