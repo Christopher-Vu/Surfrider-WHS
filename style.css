@@ -155,25 +155,19 @@ body {
 
 
 .title {
+    text-shadow: 1px 1px 5px black;
     margin: 0;
     padding: 0;
     font-size: clamp(3rem, 7vw, 100vw);
 }
 
-.statement {
-    background: linear-gradient(
-        to bottom,
-        transparent 60%,
-        #4682A9 60%
-    );
-
+.subtitle {
     position: absolute;
     margin: 0;
     padding: 0;
     font-size: 2vh;
     transform: translate(10vw, 40vh);
     color: aliceblue;
-    width: 57ch;
     
     animation: typing 4s steps(64), .5s step-end infinite alternate;
     white-space: nowrap;
@@ -1059,12 +1053,8 @@ body {
         right: 7vw;
     }
 
-    .statement {
+    .subtitle {
         font-size: calc(100vw / 39); 
-    }
-
-    .title {
-        transform: translate(10vw, 38vh);
     }
 
     .menu {
@@ -1073,6 +1063,10 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .title {
+        padding-top: 100px;
+    }
+
     .gi-button.gi-about {
         border: 3px solid white;
         color: white;
