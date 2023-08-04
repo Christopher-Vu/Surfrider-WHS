@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         buttons.forEach(function(button) {
             if (isCoarsePointer || isNoPointer) {
-                button.style.textShadow = "1px 1pv 2px black";
+                button.style.textShadow = "1px 1px 2px black";
                 button.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
             }
             button.style.color = 'white';
