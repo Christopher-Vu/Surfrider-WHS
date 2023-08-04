@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             wideOnlyNav.forEach(function(navItem) {
                 if (!isNoPointer && !isCoarsePointer) {
-                    navItem.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-                    navItem.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
                     navItem.style.display = 'block';
                 }
             });
@@ -110,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 300);
 
         buttons.forEach(function(button) {
+            button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+            button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
             button.style.color = 'white';
             const buttonSpan = button.querySelector('span')
             const buttonBefore = document.createElement('style');
