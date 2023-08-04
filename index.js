@@ -108,8 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 300);
 
         buttons.forEach(function(button) {
-            button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-            button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
+            if (isCoarsePointer || isNoPointer) {
+                button.style.textShadow = "1px 1pv 10px black";
+                button.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
+            }
             button.style.color = 'white';
             const buttonSpan = button.querySelector('span')
             const buttonBefore = document.createElement('style');
@@ -141,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isNoPointer || isCoarsePointer) {
                 buttons.forEach(function(button) {
-                    button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-                    button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
+                    button.style.textShadow = "1px 1px 2px black";
+                    button.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
                     const buttonSpan = button.querySelector('span')
                     button.style.color = 'rgba(0, 0, 0, 0)';
                     button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
