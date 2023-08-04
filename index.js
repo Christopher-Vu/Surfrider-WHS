@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             wideOnlyNav.forEach(function(navItem) {
                 if (!isNoPointer && !isCoarsePointer) {
+                    navItem.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+                    navItem.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
                     navItem.style.display = 'block';
                 }
             });
@@ -139,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isNoPointer || isCoarsePointer) {
                 buttons.forEach(function(button) {
+                    button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+                    button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
                     const buttonSpan = button.querySelector('span')
                     button.style.color = 'rgba(0, 0, 0, 0)';
                     button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
@@ -166,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.style.transform = 'translate(200%, 0%)';
             menu.style.transition = "all 0.7s";
             overlay.style.display = 'block';
-            setTimeout(function() { // Apply the transform property after a slight delay
+            setTimeout(function() { 
                 if (window.innerWidth > window.innerHeight) {
                     menu.style.transform = 'translate(100%, 0%)';
                 } else {
