@@ -1067,7 +1067,7 @@ body {
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
     .title {
-        color: black !important;
+        color: white !important;
         text-shadow: 1px 1px 5px black !important;
     }
 
