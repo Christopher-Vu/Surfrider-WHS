@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isNoPointer || isCoarsePointer) {
                 buttons.forEach(function(button) {
-                    button.style.textShadow = "0px 0px 0px black";
+                    button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
                     button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
                     const buttonSpan = button.querySelector('span')
                     button.style.color = 'rgba(0, 0, 0, 0)';
