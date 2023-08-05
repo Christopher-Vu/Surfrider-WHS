@@ -1166,6 +1166,7 @@ body {
     }
 
     .cabby-wrapper {
+        margin-bottom: 15vh;
         width: 75vw;
         margin-left: 12.5vw;
     }
@@ -1175,8 +1176,8 @@ body {
     }
 
     .title {
-        color: white !important;
-        text-shadow: 1px 1px 5px white !important;
+        color: black !important;
+        text-shadow: 1px 1px 5px black !important;
     }
 
     .gi-button.gi-about {
