@@ -1068,7 +1068,7 @@ body {
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
     .title {
         color: white !important;
-        text-shadow: 1px 1px 5px black !important;
+        text-shadow: 1px 1px 5px white !important;
     }
 
     .gi-button.gi-about {
