@@ -930,6 +930,70 @@ body {
     color: #909090;
 }
 
+.cabby-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+    height: 60vh;
+    width: 60vw;
+    margin-left: 20vw;
+    position: relative;
+}
+
+.cabby-card {
+    background-color: white;
+    position: absolute;
+    border-radius: 15px;
+    margin-top: 5%;
+    width: 100%;
+    height: 95%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    z-index: 0;
+}   
+
+.cabby-photo {
+    position: absolute;
+    width: 83%;
+    height: 36%;
+    border-radius: 15px;
+    background-image: url('images/Alex.jpg');
+    box-shadow: 0px 10px 0px#151515;
+    z-index: 0;
+}
+
+.cabby-content-wrapper {
+    margin-top: 23vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    height: 45%;
+    width: 100%;
+    z-index: 0;
+}
+
+.cabby-title {
+    margin-top: 3%;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cabby-position {
+    margin-top: 1%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.cabby-border {
+    position: absolute;
+    inset: 25px;
+    border: 2px solid #4682A9;
+    border-radius: 15px;
+}
+
+.cabby-desc {
+    font-size: 1em;
+}
+
 @media (max-aspect-ratio: 1/1) {
     .bmenu-link {
         font-size: 1em;
@@ -1066,6 +1130,24 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .cabby-content-wrapper {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+
+    .cabby-title {
+        font-size: 1.3em;
+    }
+
+    .cabby-position {
+        font-size: 1em;
+    }
+
+    .cabby-wrapper {
+        width: 75vw;
+        margin-left: 12.5vw;
+    }
+
     .title {
         color: white !important;
         text-shadow: 1px 1px 5px white !important;
