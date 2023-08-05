@@ -933,8 +933,7 @@ body {
 .cabby-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 10vh;
-    height: 60vh;
+    margin-bottom: 25vh;
     width: 60vw;
     margin-left: 20vw;
     position: relative;
@@ -944,10 +943,10 @@ body {
     background-color: white;
     position: absolute;
     border-radius: 15px;
-    margin-top: 5%;
+    margin-top: 3%;
     width: 100%;
-    height: 95%;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 97%;
+    box-shadow: 0px 10px 50px black, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     z-index: 0;
 }   
 
@@ -965,6 +964,7 @@ body {
     margin-top: 23vh;
     padding-left: 7vw;
     padding-right: 7vw;
+    margin-bottom: 5%;
     height: 45%;
     width: 100%;
     z-index: 0;
@@ -990,11 +990,30 @@ body {
     border-radius: 15px;
 }
 
-.cabby-desc {
-    font-size: 1em;
+.cabby-button span {
+    height: 155%;
+}
+
+.cabby-button {
+    position: relative;
+}
+
+#cabby-bg {
+    background-image: url('images/cabinet-bg.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10vh; 
+    padding-bottom: 10vh; 
+    display: flex; 
+    flex-direction: column; 
+    z-index: -5;
 }
 
 @media (max-aspect-ratio: 1/1) {
+    .cabby-content-wrapper {
+        margin-bottom: 4vh;
+    }
+
     .bmenu-link {
         font-size: 1em;
     }
@@ -1131,6 +1150,8 @@ body {
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
     .cabby-content-wrapper {
+        margin-bottom: 7vh;
+        margin-top: 30vh;
         padding-left: 12vw;
         padding-right: 12vw;
     }
@@ -1146,6 +1167,10 @@ body {
     .cabby-wrapper {
         width: 75vw;
         margin-left: 12.5vw;
+    }
+
+    .cabby-desc {
+        font-size: 3vw;
     }
 
     .title {
