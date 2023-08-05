@@ -933,6 +933,7 @@ body {
 .cabby-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 5vh;
     margin-bottom: 25vh;
     width: 60vw;
     margin-left: 20vw;
@@ -1000,13 +1001,13 @@ body {
 
 #cabby-bg {
     background-image: url('images/cabinet-bg.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 10vh; 
     padding-bottom: 10vh; 
     display: flex; 
     flex-direction: column; 
     z-index: -5;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 @media (max-aspect-ratio: 1/1) {
