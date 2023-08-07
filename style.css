@@ -331,7 +331,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: -4;
-    background-color: #F6F4EB; 
+    background-color: whitesmoke; 
 }
 
 #about-header-1 {
@@ -406,7 +406,7 @@ body {
 }
 
 .about-p {
-    font-size: 1.5em;
+    font-size: 2em;
     color:black;
     width: 50%;
     margin-left: 25%;
@@ -573,7 +573,7 @@ body {
 
 #about-2 {
     padding-bottom: 30px;
-    background-color: #F6F4EB;
+    background-color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -629,7 +629,7 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     background-size: cover;
-    background-position: center;
+    background-position: center91C8E4
 }
 
 #color-box-2 {
@@ -785,7 +785,7 @@ body {
     height: 40vh;
     padding-top: 35px;
     padding-bottom: 50px;
-    background-color: #F6F4EB; 
+    background-color: whitesmoke; 
 }
 
 #about-header-4 { 
@@ -1000,7 +1000,7 @@ body {
 }
 
 #cabby-bg {
-    background-image: url('images/cabinet-bg.jpg'); 
+    background-image: url('images/cabinet-bg.png'); 
     padding-top: 10vh; 
     padding-bottom: 10vh; 
     display: flex; 
@@ -1008,6 +1008,21 @@ body {
     z-index: -5;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.news-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 50vh;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -1333,6 +1348,7 @@ body {
     }
 
     .about-p {
+        font-size: 1.5em;
         margin-top: 12vh;
         width: 80%;
         text-align: center;
@@ -1509,6 +1525,7 @@ body {
     }
 
     .carousel-btn-2:hover {
+        box-shadow: none;
         background-color: #090B14;
         color: white;
         border-radius: 100%;
