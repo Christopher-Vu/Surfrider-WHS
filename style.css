@@ -1012,17 +1012,44 @@ body {
 
 .news-grid {
     display: grid;
+    justify-content: center;
     grid-template-columns: auto auto auto;
-    width: 100vw;
-    height: 100vh;
 }
 
 .news-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 50vh;
+    height: 95vh;
+    width: 30vw;
+}
+
+.news-wrapper {
+    margin-top: 15vh;
+    position: relative;
+    height: 95%;
+    width: 85%;
+}
+
+.news-image {
+    height: 75%;
+    background-image: url('images/ocean-protection.png');
+}
+
+.news-title {
+    text-align: center;
+    margin-top: 7%;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #151515;
+}
+
+.news-date{
+    text-align: center;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #454545;
 }
 
 @media (max-aspect-ratio: 1/1) {
