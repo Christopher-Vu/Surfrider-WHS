@@ -27,7 +27,6 @@ function isElementInViewport(element) {
     );
 }
 
-
 function fadeInElement(element) {
     if (isElementInViewport(element)) {
         element.style.animation = "fadeInScroll 1s forwards";
@@ -79,6 +78,7 @@ function prevSlide() {
 showSlide(currentSlide);
 
 document.addEventListener('DOMContentLoaded', function () {
+
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
     const wideOnlyNav = document.querySelectorAll('.wide-only-nav');
@@ -125,59 +125,65 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
+    function openMenu() {
+        document.body.style.overflow = 'hidden';
+        menu.classList.toggle('show');
+        if (window.innerWidth < 600) { 
+                menu.style.display = "flex";
+        } else {
+            menu.style.display = "grid";
+        }
+
+        wideOnlyNav.forEach(function(navItem) {
+            navItem.style.display = 'none';
+            });
+
+        if (isNoPointer || isCoarsePointer) {
+            buttons.forEach(function(button) {
+                button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+                button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
+                const buttonSpan = button.querySelector('span')
+                button.style.color = 'rgba(0, 0, 0, 0)';
+                button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+                buttonSpan.style.border = '4px solid rgba(0, 0, 0, 0)';
+            });
+        } else {
+            buttons.forEach(function(button) {
+                const buttonSpan = button.querySelector('span')
+                button.style.color = 'black';
+                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                buttonSpan.style.border = '4px solid black';
+            });
+
+            const buttonBefore = document.createElement('style');
+            buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
+            document.head.appendChild(buttonBefore);
+
+            const bbbStyleTag = document.createElement('style');
+            bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
+            document.head.appendChild(bbbStyleTag);
+        }
+
+        menu.style.transform = 'translate(200%, 0%)';
+        menu.style.transition = "all 0.7s";
+        overlay.style.display = 'block';
+        setTimeout(function() { 
+            if (window.innerWidth > window.innerHeight) {
+                menu.style.transform = 'translate(100%, 0%)';
+            } else {
+                menu.style.transform = 'translate(0%, 0%)';
+            }  
+        }, 50);
+    }
+
+    closeMenu(); // Idk why but theres a bug with the viewport where theres a lil horizontal leeway before u click, this fixes it
+
     menuIcon.addEventListener('click', function() {
         if (menu.classList.contains('show')) {
             closeMenu();
         } else {
-            document.body.style.overflow = 'hidden';
-            menu.classList.toggle('show');
-            if (window.innerWidth < 600) { 
-                    menu.style.display = "flex";
-            } else {
-                menu.style.display = "grid";
-            }
-
-            wideOnlyNav.forEach(function(navItem) {
-                navItem.style.display = 'none';
-                });
-
-            if (isNoPointer || isCoarsePointer) {
-                buttons.forEach(function(button) {
-                    button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-                    button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
-                    const buttonSpan = button.querySelector('span')
-                    button.style.color = 'rgba(0, 0, 0, 0)';
-                    button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-                    buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-                    buttonSpan.style.border = '4px solid rgba(0, 0, 0, 0)';
-                });
-            } else {
-                buttons.forEach(function(button) {
-                    const buttonSpan = button.querySelector('span')
-                    button.style.color = 'black';
-                    buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                    buttonSpan.style.border = '4px solid black';
-                });
-
-                const buttonBefore = document.createElement('style');
-                buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
-                document.head.appendChild(buttonBefore);
-
-                const bbbStyleTag = document.createElement('style');
-                bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
-                document.head.appendChild(bbbStyleTag);
-            }
-
-            menu.style.transform = 'translate(200%, 0%)';
-            menu.style.transition = "all 0.7s";
-            overlay.style.display = 'block';
-            setTimeout(function() { 
-                if (window.innerWidth > window.innerHeight) {
-                    menu.style.transform = 'translate(100%, 0%)';
-                } else {
-                    menu.style.transform = 'translate(0%, 0%)';
-                }  
-            }, 50);
+            openMenu();
         }
     });
 
