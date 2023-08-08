@@ -1106,6 +1106,22 @@ body {
     color: #E0E0E0;
 }
 
+.news-template-flexbox {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+}
+
+.news-template-row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
 @media (max-aspect-ratio: 1/1) {
     .cabby-content-wrapper {
         margin-bottom: 4vh;
