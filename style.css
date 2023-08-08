@@ -1012,6 +1012,7 @@ body {
 
 .news-grid {
     padding-top: 10vh;
+    padding-bottom: 10vh;
     display: grid;
     background-color: whitesmoke;
     justify-content: center;
