@@ -1011,7 +1011,9 @@ body {
 }
 
 .news-grid {
+    padding-top: 10vh;
     display: grid;
+    background-color: whitesmoke;
     justify-content: center;
     grid-template-columns: auto auto auto;
 }
@@ -1192,6 +1194,22 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .news-grid {
+        grid-template-columns: auto;
+    }
+
+    .news-title {
+        font-size: 1.75em;
+    }
+
+    .news-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 80vw;
+    }
+
     .cabby-content-wrapper {
         margin-bottom: 7vh;
         margin-top: 30vh;
