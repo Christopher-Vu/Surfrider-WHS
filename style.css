@@ -956,7 +956,7 @@ body {
     width: 83%;
     height: 36%;
     border-radius: 15px;
-    background-image: url('images/Alex.jpg');
+    background-image: url('images/placeholder-image.png');
     box-shadow: 0px 10px 0px#151515;
     z-index: 0;
 }
@@ -1053,7 +1053,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 75%;
-    background-image: url('images/ocean-protection.png');
+    background-image: url('images/placeholder-image.png');
 }
 
 .news-title {
@@ -1140,7 +1140,7 @@ body {
 .news-template-image {
     width: 85%;
     height: 85%;
-    background-image: url('images/index.png');
+    background-image: url('images/placeholder-image.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center
@@ -1343,7 +1343,6 @@ body {
         margin-top: 2vh;
         margin-bottom: 2vh;
         height: 30vh;
-        background-image: url('images/index.png');
     }
 
     .news-grid {
