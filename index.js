@@ -1,14 +1,13 @@
-window.addEventListener("orientationchange", function () {
-    var orientation = window.screen.orientation;
-    if (orientation.type !== "portrait-primary" && orientation.type !== "portrait-secondary") {
-        // Lock the screen to portrait mode
-        if (screen.lockOrientation) {
-        screen.lockOrientation("portrait");
-        } else if (screen.mozLockOrientation) {
-        screen.mozLockOrientation("portrait");
-        } else if (screen.msLockOrientation) {
-        screen.msLockOrientation("portrait");
-        }
+const fadeButtons = document.querySelectorAll('.bbb');
+let scrollPosition = 0;
+
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const scrollInstructions = document.querySelector('.scroll-instructions');
+    
+    if (scrollPosition > 0) {
+        scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
+        scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
     }
 });
     
@@ -182,67 +181,61 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIcon.addEventListener('click', function() {
         if (menu.classList.contains('show')) {
             closeMenu();
+            fadeButtonsWithMenu();
         } else {
             openMenu();
+            fadeButtonsWithMenu();
         }
     });
 
     document.addEventListener('click', function (event) {
         if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
             closeMenu();
+            fadeButtonsWithMenu();
         }
-    });
-
-    window.addEventListener('scroll', function() {
-        const fadeButtons = document.querySelectorAll('.bbb');
-        const scrollPosition = window.scrollY;
-        const scrollInstructions = document.querySelector('.scroll-instructions');
-        
-        if (scrollPosition > 0) {
-            scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
-            scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
-        }
-        
-        fadeButtons.forEach(function(element) {
-            if (scrollPosition > 0) {
-                element.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-                element.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
-                const buttonSpan = element.querySelector('span')
-                element.style.color = "rgba(0, 0, 0, 0)";
-                buttonSpan.style.background = "rgba(0, 0, 0, 0)";
-                buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
-                wideOnlyNav.forEach(function(navItem) {
-                    navItem.style.color = 'rgba(0, 0, 0, 0)';
-                });
-
-                setTimeout(function() {
-                    element.style.display = "none";
-                    wideOnlyNav.forEach(function(navItem) {
-                        navItem.style.display = 'none';
-                    });
-                }, 600);
-            } else {
-                element.style.textShadow = "1px 1px 2px black";
-                element.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
-                element.style.color = "white";
-                const buttonSpan = element.querySelector('span')
-                buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
-                buttonSpan.style.border = "4px solid white";
-                wideOnlyNav.forEach(function(navItem) {
-                    if (!isNoPointer && !isCoarsePointer) {
-                        navItem.style.color = '#454545';
-                    }
-                });
-
-                setTimeout(function() {
-                    element.style.display = "block";
-                    wideOnlyNav.forEach(function(navItem) {
-                        if (!isNoPointer && !isCoarsePointer) {
-                            navItem.style.display = 'block';
-                        }
-                    });
-                }, 600);
-            }
-        });
     });
 });
+
+function fadeButtonsWithMenu() {
+    fadeButtons.forEach(function(element) {
+        if (scrollPosition > 0) {
+            element.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+            element.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
+            const buttonSpan = element.querySelector('span')
+            element.style.color = "rgba(0, 0, 0, 0)";
+            buttonSpan.style.background = "rgba(0, 0, 0, 0)";
+            buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
+            wideOnlyNav.forEach(function(navItem) {
+                navItem.style.color = 'rgba(0, 0, 0, 0)';
+            });
+
+            setTimeout(function() {
+                element.style.display = "none";
+                wideOnlyNav.forEach(function(navItem) {
+                    navItem.style.display = 'none';
+                });
+            }, 600);
+        } else {
+            element.style.textShadow = "1px 1px 2px black";
+            element.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
+            element.style.color = "white";
+            const buttonSpan = element.querySelector('span')
+            buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
+            buttonSpan.style.border = "4px solid white";
+            wideOnlyNav.forEach(function(navItem) {
+                if (!isNoPointer && !isCoarsePointer) {
+                    navItem.style.color = '#454545';
+                }
+            });
+
+            setTimeout(function() {
+                element.style.display = "block";
+                wideOnlyNav.forEach(function(navItem) {
+                    if (!isNoPointer && !isCoarsePointer) {
+                        navItem.style.display = 'block';
+                    }
+                });
+            }, 600);
+        }
+    }); 
+}
