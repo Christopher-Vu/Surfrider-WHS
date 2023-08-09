@@ -1110,15 +1110,16 @@ body {
     gap: 6vw;
     display: flex;
     flex-direction: column;
-    margin: 0;
     width: 100vw;
-    padding-right: 10vw;
+    margin-right: 10vw;
+    margin-right: 10vw;
     padding-top: 12vh;
     padding-bottom: 12vh;
     background-color: whitesmoke;
 }
 
 .news-template-row {
+    position: relative;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -1126,6 +1127,7 @@ body {
 }
 
 .news-template-image-wrapper {
+    content: '';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1145,8 +1147,8 @@ body {
 }
 
 .news-template-text-wrapper {
-    margin: 0;
-    padding-right: 11%;
+    padding-right: 7vw;
+    padding-left: 7vw;
 }
 
 .news-template-text-header {
@@ -1159,18 +1161,13 @@ body {
 }
 
 .news-template-large-text {
+    margin: 0;
     font-size: 5em;
     font-weight: bold;
     padding-right: 7vw;
     padding-left: 7vw;
 }
 
-.news-template-cb-right{
-    position: absolute;
-    color: lightblue;
-    height: 90%;
-    width: 80%;
-}
 
 @media (max-aspect-ratio: 1/1) {
     .cabby-content-wrapper {
@@ -1312,8 +1309,41 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
-    .news-template-title {
-        font-size: 4vh;
+    .news-template-row {
+        gap: 7vh;
+        flex-direction: column; 
+    }
+
+    .news-template-text-wrapper, .news-template-large-text, .news-template-image-wrapper {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .news-template-large-text {
+        font-size: 2.5em;
+    }
+
+    .news-template-text-header {
+        font-size: 2.5em;
+    }
+
+    .news-template-text-paragraph {
+        font-size: 1.5em;
+    }
+
+    .news-template-image-wrapper {
+        height: 50vh;
+        margin-left: 7vw;
+        margin-right: 7vw;
+    }
+
+    .news-template-image {
+        padding-left: 39vw;
+        padding-right: 39vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        height: 30vh;
+        background-image: url('images/index.png');
     }
 
     .news-grid {

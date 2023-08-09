@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NEWS TITLE HERE</title> <!--CHANGE TITLE-->
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap" rel="stylesheet">
         <link rel="icon" href="/images/logo.png">
     </head>
@@ -67,17 +67,16 @@
                 </div>
 
                 <div class="news-template-row">
-                    <div class="news-template-image-wrapper" style="flex: 1; background-color: #4682A9;"> 
-                        <div class="news-template-image" style="width: 90%"></div> <!--2 ITEMS: LESS WIDTH CHANGE-->
-                    </div>
-
                     <div class="news-template-text-wrapper" style="flex: 1;"> 
                         <h2 class="news-template-text-header"><span class="low-highlight-blue">This is a header</span></h2>
                         <p class="news-template-text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum 
                             numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque 
-                            rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius 
-                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!</p> <!--ADJUST FONT SIZES AS NEEDED-->
+                            rerum! Provident similique accusantium nemo autem. </p> <!--ADJUST FONT SIZES AS NEEDED-->
+                    </div>
+
+                    <div class="news-template-image-wrapper" style="flex: 1; background-color: #4682A9;"> 
+                        <div class="news-template-image" style="width: 90%"></div> <!--2 ITEMS: LESS WIDTH CHANGE-->
                     </div>
                 </div>
 
@@ -86,11 +85,20 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
 
-                    <p class="news-template-large-text">This is another section of very large text using the news template 
-                        large text, this time to display color boxes. 
-                        <span class="news-template-cb-right"></span>
+                    <p class="news-template-large-text" style="padding-left: 0;">The padding left is removed on this 
+                        section of very large text b/cs there's already a gap. use <span class="low-highlight-blue">span</span>
+                        for highlighting.
                     </p>
+                </div>
+
+                <div id="about-4" class="about-section background-div">  <!--Copied from the main page lol-->
+                    <h2 id="about-header-4" class="about-header fade-in-scroll"><span class="low-highlight-blue">Get Involved</span></h2>
                     
+                    <div id="color-box-4" class="fade-in-scroll-slow"></div>
+                    <div id="color-box-5" class="fade-in-scroll">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdm4NoGbqrgmaeiGo3bjeDEAeCjxRVLGr7ODdxTqHJbdGeHjA/viewform?usp=sf_link" target="_blank" class="gi-button gi-about">Sign Up<span></span></a>
+                        <a href="volunteer.html" class="gi-button gi-about">Volunteer<span></span></a>
+                    </div>
                 </div>
             </div>
             <!--ALL NEWS TEMPLATE LAYOUT ITEMS ARE ABOVE-->
