@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NEWS TITLE HERE</title> <!--CHANGE TITLE-->
 
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap" rel="stylesheet">
-        <link rel="icon" href="images/logo.png">
+        <link rel="icon" href="/images/logo.png">
     </head>
     <div class="body-wrapper">
         <body>
             <div class="landing-background-wrapper" style="background-color: whitesmoke;">
-                <div class="landing-background" style="background-image: url('/images/volunteer.png');">
+                <div class="landing-background" style="background-image: url('/images/news-template.jpeg');">
                     <div class="top-section">
                         <div class="navbar">
                             <div class="menu-icon navbar-item fade-in-fast fade-down" style="float: right;">≡</div> 
@@ -24,10 +24,10 @@
                         </div>
                     </div>
 
-                    <p class="news-template-title fade-title"><br>News Title Here</p> <!--CHANGE TITLE-->
-                    <p class="news-template-date" style="width: 10ch; transform: translate(10vw, 28vh);">6 / 9 / 2023</p> <!--CHANGE DATE-->
-                    <p class="news-template-subtitle subtitle" style="width: 50ch; transform: translate(10vw, 32vh);color: white;">Super cool subtitle bottom text</p> <!--CHANGE SUBTITLE-->
-                    <p class="news-template-subtitle subtitle" style="width: 50ch; transform: translate(10vw, 35vh); color: white;">Lorem ipsum dolor placeholder text stuff</p> <!--CHANGE SUBTITLE-->
+                    <p class="news-template-title fade-title" style="color: black;"><br>News Title Here</p> <!--CHANGE TITLE / COLOR-->
+                    <p class="news-template-date" style="width: 10ch; transform: translate(10vw, 28vh); color: black;">6 / 9 / 2023</p> <!--CHANGE DATE / COLOR-->
+                    <p class="news-template-subtitle subtitle" style="width: 50ch; transform: translate(10vw, 32vh);color: black;">Super cool subtitle bottom text</p> <!--CHANGE SUBTITLE / COLOR-->
+                    <p class="news-template-subtitle subtitle" style="width: 50ch; transform: translate(10vw, 35vh); color:black;">Lorem ipsum dolor placeholder text stuff</p> <!--CHANGE SUBTITLE / COLOR-->
                     <p class="scroll-instructions" style="transform: translate(10vw, 46vh);">SCROLL TO EXPLORE</p>   
                 </div>
             </div>
@@ -60,7 +60,38 @@
 
             <!--ALL NEWS TEMPLATE LAYOUT ITEMS ARE BELOW-->
             <div class="news-template-flexbox">
+                <div class="news-template-row"> <!--USE THIS ANYTIME YOU WANT TO START A NEW ROW-->
+                    <div class="news-template-image-wrapper" style="flex: 1; background-color:lightblue;"> 
+                        <div class="news-template-image" style="width: 93%"></div> <!--CHANGE WIDTH BASED ON HOW MANY ITEMS IN ROW-->
+                    </div>
+                </div>
 
+                <div class="news-template-row">
+                    <div class="news-template-image-wrapper" style="flex: 1; background-color: #4682A9;"> 
+                        <div class="news-template-image" style="width: 90%"></div> <!--2 ITEMS: LESS WIDTH CHANGE-->
+                    </div>
+
+                    <div class="news-template-text-wrapper" style="flex: 1;"> 
+                        <h2 class="news-template-text-header"><span class="low-highlight-blue">This is a header</span></h2>
+                        <p class="news-template-text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum 
+                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque 
+                            rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius 
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!</p> <!--ADJUST FONT SIZES AS NEEDED-->
+                    </div>
+                </div>
+
+                <div class="news-template-row">
+                    <p class="news-template-large-text">This is a section of very large text using the news large text.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+
+                    <p class="news-template-large-text">This is another section of very large text using the news template 
+                        large text, this time to display color boxes. 
+                        <span class="news-template-cb-right"></span>
+                    </p>
+                    
+                </div>
             </div>
             <!--ALL NEWS TEMPLATE LAYOUT ITEMS ARE ABOVE-->
             
