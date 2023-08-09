@@ -1,14 +1,15 @@
 const fadeButtons = document.querySelectorAll('.bbb');
-let scrollPosition = 0;
+var scrollPosition = 0;
 
 window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
+    scrollPosition = window.scrollY;
     const scrollInstructions = document.querySelector('.scroll-instructions');
     
     if (scrollPosition > 0) {
         scrollInstructions.style.background = "rgba(0, 0, 0, 0)";
         scrollInstructions.style.color = "rgba(0, 0, 0, 0)";
     }
+
 });
     
 const fadeElements = document.querySelectorAll('.fade-in-scroll');
@@ -89,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
     function closeMenu() {
+        fadeButtonsWithMenu();
+
         document.body.style.overflow = 'auto';
         document.body.style.overflowX = 'hidden';
         menu.style.transform = "translate(200%, 0%)"; 
@@ -125,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     function openMenu() {
+        fadeButtonsWithMenu();
+
         document.body.style.overflow = 'hidden';
         menu.classList.toggle('show');
         if (window.innerWidth < 600) { 
@@ -137,31 +142,33 @@ document.addEventListener('DOMContentLoaded', function () {
             navItem.style.display = 'none';
             });
 
-        if (isNoPointer || isCoarsePointer) {
-            buttons.forEach(function(button) {
-                button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
-                button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
-                const buttonSpan = button.querySelector('span')
-                button.style.color = 'rgba(0, 0, 0, 0)';
-                button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-                buttonSpan.style.border = '4px solid rgba(0, 0, 0, 0)';
-            });
-        } else {
-            buttons.forEach(function(button) {
-                const buttonSpan = button.querySelector('span')
-                button.style.color = 'black';
-                buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                buttonSpan.style.border = '4px solid black';
-            });
+        if (scrollPosition == 0) {
+            if (isNoPointer || isCoarsePointer) {
+                buttons.forEach(function(button) {
+                    button.style.textShadow = "0px 0px 0px rgba(0, 0, 0, 0)";
+                    button.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px inset';
+                    const buttonSpan = button.querySelector('span')
+                    button.style.color = 'rgba(0, 0, 0, 0)';
+                    button.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                    buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+                    buttonSpan.style.border = '4px solid rgba(0, 0, 0, 0)';
+                });
+            } else {
+                buttons.forEach(function(button) {
+                    const buttonSpan = button.querySelector('span')
+                    button.style.color = 'black';
+                    buttonSpan.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                    buttonSpan.style.border = '4px solid black';
+                });
 
-            const buttonBefore = document.createElement('style');
-            buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
-            document.head.appendChild(buttonBefore);
+                const buttonBefore = document.createElement('style');
+                buttonBefore.innerHTML = `.bbb:hover span::before { background-color: black }`;
+                document.head.appendChild(buttonBefore);
 
-            const bbbStyleTag = document.createElement('style');
-            bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
-            document.head.appendChild(bbbStyleTag);
+                const bbbStyleTag = document.createElement('style');
+                bbbStyleTag.innerHTML = '.bbb:hover span::before { background-color: black; } .bbb:hover { color: white !important; }';
+                document.head.appendChild(bbbStyleTag);
+            }
         }
 
         menu.style.transform = 'translate(200%, 0%)';
@@ -181,17 +188,14 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIcon.addEventListener('click', function() {
         if (menu.classList.contains('show')) {
             closeMenu();
-            fadeButtonsWithMenu();
         } else {
             openMenu();
-            fadeButtonsWithMenu();
         }
     });
 
     document.addEventListener('click', function (event) {
         if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
             closeMenu();
-            fadeButtonsWithMenu();
         }
     });
 });
@@ -205,16 +209,6 @@ function fadeButtonsWithMenu() {
             element.style.color = "rgba(0, 0, 0, 0)";
             buttonSpan.style.background = "rgba(0, 0, 0, 0)";
             buttonSpan.style.border = "4px solid rgba(0, 0, 0, 0)";
-            wideOnlyNav.forEach(function(navItem) {
-                navItem.style.color = 'rgba(0, 0, 0, 0)';
-            });
-
-            setTimeout(function() {
-                element.style.display = "none";
-                wideOnlyNav.forEach(function(navItem) {
-                    navItem.style.display = 'none';
-                });
-            }, 600);
         } else {
             element.style.textShadow = "1px 1px 2px black";
             element.style.boxShadow = 'rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -12px 0px inset';
@@ -222,20 +216,6 @@ function fadeButtonsWithMenu() {
             const buttonSpan = element.querySelector('span')
             buttonSpan.style.background = "rgba(246, 244, 235, 0.2)";
             buttonSpan.style.border = "4px solid white";
-            wideOnlyNav.forEach(function(navItem) {
-                if (!isNoPointer && !isCoarsePointer) {
-                    navItem.style.color = '#454545';
-                }
-            });
-
-            setTimeout(function() {
-                element.style.display = "block";
-                wideOnlyNav.forEach(function(navItem) {
-                    if (!isNoPointer && !isCoarsePointer) {
-                        navItem.style.display = 'block';
-                    }
-                });
-            }, 600);
         }
     }); 
 }
