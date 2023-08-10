@@ -1242,6 +1242,37 @@ body {
     height: 160%;
 }
 
+.events-wrapper {
+    width: 60vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.event-image {
+    background-image: url('images/placeholder-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+}
+
+.event-title {
+    font-size: 2em;
+    flex: 2
+}
+
 @media (max-aspect-ratio: 1/1) {
     .cabby-content-wrapper {
         margin-bottom: 4vh;
@@ -1382,12 +1413,21 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .upcoming-event {
+        width: 80%;
+        margin-left: 10%;
+    }
+
     .upcoming-event-header {
         font-size: 1.4em;
     }
 
     .upcoming-event-desc {
         font-size: 0.7em;
+    }
+
+    .upcoming-event-title-wrapper {
+        padding-left: 12%;
     }
 
     .upcoming-event-title {
