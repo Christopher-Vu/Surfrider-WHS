@@ -1436,6 +1436,16 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .events-wrapper {
+        width: 80vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .event {
+        flex-direction: column;
+    }
+
     .upcoming-event {
         width: 80%;
         margin-left: 10%;
@@ -1837,9 +1847,9 @@ body {
         --_p: 100%
     }
 
-    .event {
+    /*.event {
         height: 30vh;
-    }
+    }*/
 
     .news-wrapper:hover .news-title, .news-wrapper:hover .news-date {
         opacity: 0;
