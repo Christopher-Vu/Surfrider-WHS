@@ -219,3 +219,10 @@ function fadeButtonsWithMenu() {
         }
     }); 
 }
+
+
+const aboutMenuLink = document.getElementById('about-menu-link');
+
+aboutMenuLink.addEventListener('click', function() {
+    closeMenu();
+});
