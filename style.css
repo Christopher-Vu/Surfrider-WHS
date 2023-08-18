@@ -1265,6 +1265,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     flex: 1;
+    padding: 10%;
+    content: "";
 }
 
 .event-info {
@@ -1281,6 +1283,10 @@ body {
 
 .event-text {
     font-size: 1.7em;
+}
+
+.event-link-2 {
+    position: relative;
 }
 
 .event-link {
@@ -1436,6 +1442,11 @@ body {
 }
 
 @media (pointer: none), (pointer: coarse), (max-width: 900px) {
+    .event-image {
+        padding: 20%;
+        margin-bottom: 3vh;
+    }
+
     .events-wrapper {
         width: 80vw;
         padding-left: 10vw;
@@ -1443,7 +1454,9 @@ body {
     }
 
     .event {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
         flex-direction: column;
+        margin-bottom: 5vh;
     }
 
     .upcoming-event {
@@ -1846,10 +1859,6 @@ body {
     .event-link:hover {
         --_p: 100%
     }
-
-    /*.event {
-        height: 30vh;
-    }*/
 
     .news-wrapper:hover .news-title, .news-wrapper:hover .news-date {
         opacity: 0;
